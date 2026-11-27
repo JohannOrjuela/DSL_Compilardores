@@ -38,6 +38,7 @@
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
+      <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
@@ -56,9 +57,13 @@
     <language id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints">
       <concept id="8966504967485224688" name="jetbrains.mps.lang.constraints.structure.ConstraintFunctionParameter_contextNode" flags="nn" index="2rP1CM" />
       <concept id="5564765827938091039" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_ReferentSearchScope_Scope" flags="ig" index="3dgokm" />
+      <concept id="1159285995602" name="jetbrains.mps.lang.constraints.structure.NodeDefaultSearchScope" flags="ng" index="3EP7_v">
+        <child id="1159286114227" name="searchScopeFactory" index="3EP$qY" />
+      </concept>
       <concept id="1213093968558" name="jetbrains.mps.lang.constraints.structure.ConceptConstraints" flags="ng" index="1M2fIO">
         <reference id="1213093996982" name="concept" index="1M2myG" />
         <child id="1213100494875" name="referent" index="1Mr941" />
+        <child id="1213101058038" name="defaultScope" index="1MtirG" />
       </concept>
       <concept id="1148687176410" name="jetbrains.mps.lang.constraints.structure.NodeReferentConstraint" flags="ng" index="1N5Pfh">
         <reference id="1148687202698" name="applicableLink" index="1N5Vy1" />
@@ -295,6 +300,49 @@
               </node>
             </node>
           </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="6Fle6ZWC3Vq">
+    <ref role="1M2myG" to="qyw2:6Fle6ZWC3Vn" resolve="VarRef" />
+    <node concept="3EP7_v" id="6Fle6ZWC3Vr" role="1MtirG">
+      <node concept="3dgokm" id="6Fle6ZWC3Vt" role="3EP$qY">
+        <node concept="3clFbS" id="6Fle6ZWC3Vv" role="2VODD2">
+          <node concept="3cpWs8" id="6Fle6ZWC3Yo" role="3cqZAp">
+            <node concept="3cpWsn" id="6Fle6ZWC3Yr" role="3cpWs9">
+              <property role="TrG5h" value="flujo" />
+              <node concept="3Tqbb2" id="6Fle6ZWC3Yn" role="1tU5fm">
+                <ref role="ehGHo" to="qyw2:6Fle6ZWwBnr" resolve="Workflow" />
+              </node>
+              <node concept="2OqwBi" id="6Fle6ZWC4bv" role="33vP2m">
+                <node concept="2rP1CM" id="6Fle6ZWC42k" role="2Oq$k0" />
+                <node concept="2Xjw5R" id="6Fle6ZWC4rb" role="2OqNvi">
+                  <node concept="1xMEDy" id="6Fle6ZWC4rd" role="1xVPHs">
+                    <node concept="chp4Y" id="6Fle6ZWC4tC" role="ri$Ld">
+                      <ref role="cht4Q" to="qyw2:6Fle6ZWwBnr" resolve="Workflow" />
+                    </node>
+                  </node>
+                  <node concept="1xIGOp" id="6Fle6ZWC4vr" role="1xVPHs" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3cpWs6" id="6Fle6ZWC4wV" role="3cqZAp">
+            <node concept="2YIFZM" id="6Fle6ZWC4E6" role="3cqZAk">
+              <ref role="37wK5l" to="o8zo:4IP40Bi3eAf" resolve="forNamedElements" />
+              <ref role="1Pybhc" to="o8zo:4IP40Bi3e_R" resolve="ListScope" />
+              <node concept="2OqwBi" id="6Fle6ZWC4V4" role="37wK5m">
+                <node concept="37vLTw" id="6Fle6ZWC4GA" role="2Oq$k0">
+                  <ref role="3cqZAo" node="6Fle6ZWC3Yr" resolve="flujo" />
+                </node>
+                <node concept="3Tsc0h" id="6Fle6ZWC5jC" role="2OqNvi">
+                  <ref role="3TtcxE" to="qyw2:6Fle6ZWBati" resolve="variables" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbH" id="6Fle6ZWC414" role="3cqZAp" />
         </node>
       </node>
     </node>

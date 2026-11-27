@@ -17,9 +17,16 @@
         <reference id="7698121191689936669" name="requiredRole" index="2mgetM" />
       </concept>
       <concept id="7698121191689828050" name="NewLanguage.structure.Role" flags="ng" index="2mggUX" />
+      <concept id="7698121191690381134" name="NewLanguage.structure.Variable" flags="ng" index="2mipWx">
+        <property id="7698121191690381137" name="type" index="2mipWY" />
+      </concept>
+      <concept id="7698121191690470574" name="NewLanguage.structure.BoolLiteral" flags="ng" index="2miNN1">
+        <property id="7698121191690470576" name="value" index="2miNNv" />
+      </concept>
       <concept id="7698121191688664539" name="NewLanguage.structure.Workflow" flags="ng" index="2mlOQO">
         <reference id="7698121191688664608" name="initialState" index="2mlOTf" />
         <child id="7698121191689828052" name="roles" index="2mggUV" />
+        <child id="7698121191690381138" name="variables" index="2mipWX" />
         <child id="7698121191688664623" name="events" index="2mlOT0" />
         <child id="7698121191688664619" name="transitions" index="2mlOT4" />
         <child id="7698121191688664603" name="states" index="2mlOTO" />
@@ -29,9 +36,20 @@
         <reference id="7698121191688664618" name="target" index="2mlOT5" />
         <reference id="7698121191688664617" name="source" index="2mlOT6" />
         <reference id="7698121191688664625" name="event" index="2mlOTu" />
+        <child id="7698121191690470578" name="guard" index="2miNNt" />
       </concept>
       <concept id="7698121191688664598" name="NewLanguage.structure.State" flags="ng" index="2mlOTT">
         <property id="7698121191688715400" name="kind" index="2mlwjB" />
+      </concept>
+      <concept id="7698121191690616535" name="NewLanguage.structure.VarRef" flags="ng" index="2mtgqS">
+        <reference id="7698121191690616537" name="variable" index="2mtgqQ" />
+      </concept>
+      <concept id="7698121191690789491" name="NewLanguage.structure.GreaterThan" flags="ng" index="2mtXCs">
+        <child id="7698121191690789494" name="right" index="2mtXCp" />
+        <child id="7698121191690789493" name="left" index="2mtXCq" />
+      </concept>
+      <concept id="7698121191690789488" name="NewLanguage.structure.NumberLiteral" flags="ng" index="2mtXCv">
+        <property id="7698121191690789490" name="value" index="2mtXCt" />
       </concept>
     </language>
   </registry>
@@ -46,12 +64,23 @@
       <ref role="2mlOT6" node="6Fle6ZWwNLM" resolve="Borrador" />
       <ref role="2mlOTu" node="6Fle6ZWwNLP" resolve="EnviarSolicitud" />
       <ref role="2mlOT5" node="6Fle6ZWwNLS" resolve="EnRevision" />
+      <node concept="2miNN1" id="6Fle6ZWC3Vm" role="2miNNt">
+        <property role="2miNNv" value="true" />
+      </node>
     </node>
     <node concept="2mlOTa" id="6Fle6ZWwNLY" role="2mlOT4">
       <property role="TrG5h" value="AprobarSolicitud" />
       <ref role="2mlOT6" node="6Fle6ZWwNLS" resolve="EnRevision" />
       <ref role="2mlOT5" node="6Fle6ZWwNLT" resolve="Aprobada" />
       <ref role="2mlOTu" node="6Fle6ZWwNLV" resolve="Aprobar" />
+      <node concept="2mtXCs" id="6Fle6ZWDkgS" role="2miNNt">
+        <node concept="2mtgqS" id="6Fle6ZWDkgV" role="2mtXCq">
+          <ref role="2mtgqQ" node="6Fle6ZWBwiG" resolve="monto" />
+        </node>
+        <node concept="2mtXCv" id="6Fle6ZWGn8P" role="2mtXCp">
+          <property role="2mtXCt" value="1000" />
+        </node>
+      </node>
     </node>
     <node concept="2mlOTa" id="6Fle6ZWwNLZ" role="2mlOT4">
       <property role="TrG5h" value="RechazarSolicitud" />
@@ -83,6 +112,10 @@
     <node concept="2mlOTT" id="6Fle6ZWwNLU" role="2mlOTO">
       <property role="TrG5h" value="Rechazada" />
       <property role="2mlwjB" value="6Fle6ZWwNM6/Final" />
+    </node>
+    <node concept="2mipWx" id="6Fle6ZWBwiG" role="2mipWX">
+      <property role="TrG5h" value="monto" />
+      <property role="2mipWY" value="6Fle6ZWBatb/Number" />
     </node>
   </node>
   <node concept="2mlOQO" id="6Fle6ZWxNHK">
@@ -259,6 +292,71 @@
       <ref role="2mlOT6" node="6Fle6ZWB726" resolve="RevisionDePrueba" />
       <ref role="2mlOT5" node="6Fle6ZWB728" resolve="Aprobada" />
       <ref role="2mlOTu" node="6Fle6ZWB72b" resolve="Aprobar" />
+    </node>
+  </node>
+  <node concept="2mlOQO" id="6Fle6ZWE25t">
+    <property role="TrG5h" value="ComparacionNoNumerica" />
+    <ref role="2mlOTf" node="6Fle6ZWE25D" resolve="Borrador" />
+    <node concept="2mggUX" id="6Fle6ZWE25u" role="2mggUV">
+      <property role="TrG5h" value="SupervisorCompras" />
+    </node>
+    <node concept="2mlOTa" id="6Fle6ZWE25v" role="2mlOT4">
+      <property role="TrG5h" value="EnviarARevision" />
+      <ref role="2mlOT6" node="6Fle6ZWE25D" resolve="Borrador" />
+      <ref role="2mlOTu" node="6Fle6ZWE25A" resolve="EnviarSolicitud" />
+      <ref role="2mlOT5" node="6Fle6ZWE25E" resolve="EnRevision" />
+      <node concept="2miNN1" id="6Fle6ZWE25w" role="2miNNt">
+        <property role="2miNNv" value="true" />
+      </node>
+    </node>
+    <node concept="2mlOTa" id="6Fle6ZWE25x" role="2mlOT4">
+      <property role="TrG5h" value="AprobarSolicitud" />
+      <ref role="2mlOT6" node="6Fle6ZWE25E" resolve="EnRevision" />
+      <ref role="2mlOT5" node="6Fle6ZWE25F" resolve="Aprobada" />
+      <ref role="2mlOTu" node="6Fle6ZWE25B" resolve="Aprobar" />
+      <node concept="2mtXCs" id="6Fle6ZWE25y" role="2miNNt">
+        <node concept="2mtgqS" id="6Fle6ZWE25z" role="2mtXCq">
+          <ref role="2mtgqQ" node="6Fle6ZWE25H" resolve="monto" />
+        </node>
+        <node concept="2mtXCv" id="6Fle6ZWE25$" role="2mtXCp">
+          <property role="2mtXCt" value="1000" />
+        </node>
+      </node>
+    </node>
+    <node concept="2mlOTa" id="6Fle6ZWE25_" role="2mlOT4">
+      <property role="TrG5h" value="RechazarSolicitud" />
+      <ref role="2mlOT6" node="6Fle6ZWE25E" resolve="EnRevision" />
+      <ref role="2mlOT5" node="6Fle6ZWE25G" resolve="Rechazada" />
+      <ref role="2mlOTu" node="6Fle6ZWE25C" resolve="Rechazar" />
+    </node>
+    <node concept="2mlOT2" id="6Fle6ZWE25A" role="2mlOT0">
+      <property role="TrG5h" value="EnviarSolicitud" />
+    </node>
+    <node concept="2mlOT2" id="6Fle6ZWE25B" role="2mlOT0">
+      <property role="TrG5h" value="Aprobar" />
+    </node>
+    <node concept="2mlOT2" id="6Fle6ZWE25C" role="2mlOT0">
+      <property role="TrG5h" value="Rechazar" />
+    </node>
+    <node concept="2mlOTT" id="6Fle6ZWE25D" role="2mlOTO">
+      <property role="TrG5h" value="Borrador" />
+      <property role="2mlwjB" value="6Fle6ZWwNM1/Initial" />
+    </node>
+    <node concept="2mlOTT" id="6Fle6ZWE25E" role="2mlOTO">
+      <property role="TrG5h" value="EnRevision" />
+      <property role="2mlwjB" value="6Fle6ZWwNM5/Approval" />
+    </node>
+    <node concept="2mlOTT" id="6Fle6ZWE25F" role="2mlOTO">
+      <property role="TrG5h" value="Aprobada" />
+      <property role="2mlwjB" value="6Fle6ZWwNM6/Final" />
+    </node>
+    <node concept="2mlOTT" id="6Fle6ZWE25G" role="2mlOTO">
+      <property role="TrG5h" value="Rechazada" />
+      <property role="2mlwjB" value="6Fle6ZWwNM6/Final" />
+    </node>
+    <node concept="2mipWx" id="6Fle6ZWE25H" role="2mipWX">
+      <property role="TrG5h" value="monto" />
+      <property role="2mipWY" value="6Fle6ZWBatd/String" />
     </node>
   </node>
 </model>
