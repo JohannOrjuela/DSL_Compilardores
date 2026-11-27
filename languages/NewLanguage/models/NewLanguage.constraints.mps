@@ -342,5 +342,91 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="1y2r_iAiNqk">
+    <ref role="1M2myG" to="qyw2:1y2r_iAhs9p" resolve="SetVariable" />
+    <node concept="1N5Pfh" id="1y2r_iAiNql" role="1Mr941">
+      <ref role="1N5Vy1" to="qyw2:1y2r_iAhs9r" resolve="var" />
+      <node concept="3dgokm" id="1y2r_iAiNrE" role="1N6uqs">
+        <node concept="3clFbS" id="1y2r_iAiNrF" role="2VODD2">
+          <node concept="3cpWs8" id="1y2r_iAiNvm" role="3cqZAp">
+            <node concept="3cpWsn" id="1y2r_iAiNvp" role="3cpWs9">
+              <property role="TrG5h" value="flujo" />
+              <node concept="3Tqbb2" id="1y2r_iAiNvl" role="1tU5fm">
+                <ref role="ehGHo" to="qyw2:6Fle6ZWwBnr" resolve="Workflow" />
+              </node>
+              <node concept="2OqwBi" id="1y2r_iAiNG3" role="33vP2m">
+                <node concept="2rP1CM" id="1y2r_iAiNyS" role="2Oq$k0" />
+                <node concept="2Xjw5R" id="1y2r_iAiNXU" role="2OqNvi">
+                  <node concept="1xMEDy" id="1y2r_iAiNXW" role="1xVPHs">
+                    <node concept="chp4Y" id="1y2r_iAiO2C" role="ri$Ld">
+                      <ref role="cht4Q" to="qyw2:6Fle6ZWwBnr" resolve="Workflow" />
+                    </node>
+                  </node>
+                  <node concept="1xIGOp" id="1y2r_iAiO4r" role="1xVPHs" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3cpWs6" id="1y2r_iAiO5Y" role="3cqZAp">
+            <node concept="2YIFZM" id="1y2r_iAiOcY" role="3cqZAk">
+              <ref role="37wK5l" to="o8zo:4IP40Bi3eAf" resolve="forNamedElements" />
+              <ref role="1Pybhc" to="o8zo:4IP40Bi3e_R" resolve="ListScope" />
+              <node concept="2OqwBi" id="1y2r_iAiOtW" role="37wK5m">
+                <node concept="37vLTw" id="1y2r_iAiOfu" role="2Oq$k0">
+                  <ref role="3cqZAo" node="1y2r_iAiNvp" resolve="flujo" />
+                </node>
+                <node concept="3Tsc0h" id="1y2r_iAiOOM" role="2OqNvi">
+                  <ref role="3TtcxE" to="qyw2:6Fle6ZWBati" resolve="variables" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="1y2r_iAiOXH">
+    <ref role="1M2myG" to="qyw2:1y2r_iAhs9u" resolve="Notify" />
+    <node concept="1N5Pfh" id="1y2r_iAiOXI" role="1Mr941">
+      <ref role="1N5Vy1" to="qyw2:1y2r_iAhs9w" resolve="role" />
+      <node concept="3dgokm" id="1y2r_iAiOYp" role="1N6uqs">
+        <node concept="3clFbS" id="1y2r_iAiOYq" role="2VODD2">
+          <node concept="3cpWs8" id="1y2r_iAiP2a" role="3cqZAp">
+            <node concept="3cpWsn" id="1y2r_iAiP2d" role="3cpWs9">
+              <property role="TrG5h" value="flujo" />
+              <node concept="3Tqbb2" id="1y2r_iAiP29" role="1tU5fm">
+                <ref role="ehGHo" to="qyw2:6Fle6ZWwBnr" resolve="Workflow" />
+              </node>
+              <node concept="2OqwBi" id="1y2r_iAiPfX" role="33vP2m">
+                <node concept="2rP1CM" id="1y2r_iAiP4B" role="2Oq$k0" />
+                <node concept="2Xjw5R" id="1y2r_iAiPxO" role="2OqNvi">
+                  <node concept="1xMEDy" id="1y2r_iAiPxQ" role="1xVPHs">
+                    <node concept="chp4Y" id="1y2r_iAiP$h" role="ri$Ld">
+                      <ref role="cht4Q" to="qyw2:6Fle6ZWwBnr" resolve="Workflow" />
+                    </node>
+                  </node>
+                  <node concept="1xIGOp" id="1y2r_iAiPA4" role="1xVPHs" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3cpWs6" id="1y2r_iAiPBE" role="3cqZAp">
+            <node concept="2YIFZM" id="1y2r_iAiPII" role="3cqZAk">
+              <ref role="37wK5l" to="o8zo:4IP40Bi3eAf" resolve="forNamedElements" />
+              <ref role="1Pybhc" to="o8zo:4IP40Bi3e_R" resolve="ListScope" />
+              <node concept="2OqwBi" id="1y2r_iAiRyc" role="37wK5m">
+                <node concept="37vLTw" id="1y2r_iAiRjI" role="2Oq$k0">
+                  <ref role="3cqZAo" node="1y2r_iAiP2d" resolve="flujo" />
+                </node>
+                <node concept="3Tsc0h" id="1y2r_iAiRVp" role="2OqNvi">
+                  <ref role="3TtcxE" to="qyw2:6Fle6ZW_3rk" resolve="roles" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 
