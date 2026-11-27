@@ -969,9 +969,6 @@
               <property role="TrG5h" value="izquierdo" />
               <node concept="17QB3L" id="1y2r_iAmnGJ" role="1tU5fm" />
               <node concept="2OqwBi" id="1y2r_iAmnRh" role="33vP2m">
-                <node concept="1YBJjd" id="1y2r_iAmnH5" role="2Oq$k0">
-                  <ref role="1YBMHb" node="1y2r_iAmlYo" resolve="comparacion" />
-                </node>
                 <node concept="3zqWPK" id="1y2r_iAmogU" role="2OqNvi">
                   <ref role="37wK5l" to="lmi:1y2r_iAm8gW" resolve="tipoDe" />
                   <node concept="2OqwBi" id="1y2r_iAmopm" role="37wK5m">
@@ -983,6 +980,9 @@
                     </node>
                   </node>
                 </node>
+                <node concept="35c_gC" id="5nOWG0auNek" role="2Oq$k0">
+                  <ref role="35c_gD" to="qyw2:1y2r_iAeZHJ" resolve="Compare" />
+                </node>
               </node>
             </node>
           </node>
@@ -991,8 +991,8 @@
               <property role="TrG5h" value="derecho" />
               <node concept="17QB3L" id="1y2r_iAmou6" role="1tU5fm" />
               <node concept="2OqwBi" id="1y2r_iAmoBM" role="33vP2m">
-                <node concept="1YBJjd" id="1y2r_iAmovq" role="2Oq$k0">
-                  <ref role="1YBMHb" node="1y2r_iAmlYo" resolve="comparacion" />
+                <node concept="35c_gC" id="5nOWG0auNye" role="2Oq$k0">
+                  <ref role="35c_gD" to="qyw2:1y2r_iAeZHJ" resolve="Compare" />
                 </node>
                 <node concept="3zqWPK" id="1y2r_iAmp36" role="2OqNvi">
                   <ref role="37wK5l" to="lmi:1y2r_iAm8gW" resolve="tipoDe" />
