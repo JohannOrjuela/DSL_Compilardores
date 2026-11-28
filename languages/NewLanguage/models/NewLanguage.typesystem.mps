@@ -964,21 +964,21 @@
           </node>
         </node>
         <node concept="3clFbS" id="1y2r_iAmlZa" role="3clFbx">
-          <node concept="3cpWs8" id="1y2r_iAmnGL" role="3cqZAp">
-            <node concept="3cpWsn" id="1y2r_iAmnGO" role="3cpWs9">
+          <node concept="3cpWs8" id="6VpIoIn6kc_" role="3cqZAp">
+            <node concept="3cpWsn" id="6VpIoIn6kcC" role="3cpWs9">
               <property role="TrG5h" value="izquierdo" />
-              <node concept="17QB3L" id="1y2r_iAmnGJ" role="1tU5fm" />
-              <node concept="2OqwBi" id="1y2r_iAmnRh" role="33vP2m">
-                <node concept="1YBJjd" id="1y2r_iAmnH5" role="2Oq$k0">
-                  <ref role="1YBMHb" node="1y2r_iAmlYo" resolve="comparacion" />
+              <node concept="17QB3L" id="6VpIoIn6kcz" role="1tU5fm" />
+              <node concept="2OqwBi" id="6VpIoIn6k_k" role="33vP2m">
+                <node concept="35c_gC" id="6VpIoIn6kdN" role="2Oq$k0">
+                  <ref role="35c_gD" to="qyw2:1y2r_iAeZHJ" resolve="Compare" />
                 </node>
-                <node concept="3zqWPK" id="1y2r_iAmogU" role="2OqNvi">
+                <node concept="3zqWPK" id="6VpIoIn6liz" role="2OqNvi">
                   <ref role="37wK5l" to="lmi:1y2r_iAm8gW" resolve="tipoDe" />
-                  <node concept="2OqwBi" id="1y2r_iAmopm" role="37wK5m">
-                    <node concept="1YBJjd" id="1y2r_iAmokt" role="2Oq$k0">
+                  <node concept="2OqwBi" id="6VpIoIn6l$Z" role="37wK5m">
+                    <node concept="1YBJjd" id="6VpIoIn6lo$" role="2Oq$k0">
                       <ref role="1YBMHb" node="1y2r_iAmlYo" resolve="comparacion" />
                     </node>
-                    <node concept="3TrEf2" id="1y2r_iAmorG" role="2OqNvi">
+                    <node concept="3TrEf2" id="6VpIoIn6m7n" role="2OqNvi">
                       <ref role="3Tt5mk" to="qyw2:1y2r_iAeZHM" resolve="left" />
                     </node>
                   </node>
@@ -986,21 +986,21 @@
               </node>
             </node>
           </node>
-          <node concept="3cpWs8" id="1y2r_iAmou8" role="3cqZAp">
-            <node concept="3cpWsn" id="1y2r_iAmoub" role="3cpWs9">
+          <node concept="3cpWs8" id="6VpIoIn6mdO" role="3cqZAp">
+            <node concept="3cpWsn" id="6VpIoIn6mdR" role="3cpWs9">
               <property role="TrG5h" value="derecho" />
-              <node concept="17QB3L" id="1y2r_iAmou6" role="1tU5fm" />
-              <node concept="2OqwBi" id="1y2r_iAmoBM" role="33vP2m">
-                <node concept="1YBJjd" id="1y2r_iAmovq" role="2Oq$k0">
-                  <ref role="1YBMHb" node="1y2r_iAmlYo" resolve="comparacion" />
+              <node concept="17QB3L" id="6VpIoIn6mdM" role="1tU5fm" />
+              <node concept="2OqwBi" id="6VpIoIn6mBK" role="33vP2m">
+                <node concept="35c_gC" id="6VpIoIn6mgf" role="2Oq$k0">
+                  <ref role="35c_gD" to="qyw2:1y2r_iAeZHJ" resolve="Compare" />
                 </node>
-                <node concept="3zqWPK" id="1y2r_iAmp36" role="2OqNvi">
+                <node concept="3zqWPK" id="6VpIoIn6nkZ" role="2OqNvi">
                   <ref role="37wK5l" to="lmi:1y2r_iAm8gW" resolve="tipoDe" />
-                  <node concept="2OqwBi" id="1y2r_iAmp8E" role="37wK5m">
-                    <node concept="1YBJjd" id="1y2r_iAmp5d" role="2Oq$k0">
+                  <node concept="2OqwBi" id="6VpIoIn6nFc" role="37wK5m">
+                    <node concept="1YBJjd" id="6VpIoIn6nr0" role="2Oq$k0">
                       <ref role="1YBMHb" node="1y2r_iAmlYo" resolve="comparacion" />
                     </node>
-                    <node concept="3TrEf2" id="1y2r_iAmpbs" role="2OqNvi">
+                    <node concept="3TrEf2" id="6VpIoIn6o8o" role="2OqNvi">
                       <ref role="3Tt5mk" to="qyw2:1y2r_iAeZHN" resolve="right" />
                     </node>
                   </node>
@@ -1008,7 +1008,7 @@
               </node>
             </node>
           </node>
-          <node concept="3clFbH" id="1y2r_iAmpcW" role="3cqZAp" />
+          <node concept="3clFbH" id="6VpIoIn6oaY" role="3cqZAp" />
           <node concept="3clFbJ" id="1y2r_iAmpgm" role="3cqZAp">
             <node concept="3clFbS" id="1y2r_iAmpgo" role="3clFbx">
               <node concept="2MkqsV" id="1y2r_iAmsBx" role="3cqZAp">
@@ -1024,28 +1024,28 @@
               <node concept="3fqX7Q" id="1y2r_iAmrbx" role="3uHU7w">
                 <node concept="2OqwBi" id="1y2r_iAmrFb" role="3fr31v">
                   <node concept="37vLTw" id="1y2r_iAmrcl" role="2Oq$k0">
-                    <ref role="3cqZAo" node="1y2r_iAmnGO" resolve="izquierdo" />
+                    <ref role="3cqZAo" node="6VpIoIn6kcC" resolve="izquierdo" />
                   </node>
                   <node concept="liA8E" id="1y2r_iAmsym" role="2OqNvi">
                     <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object)" resolve="equals" />
                     <node concept="37vLTw" id="1y2r_iAmszO" role="37wK5m">
-                      <ref role="3cqZAo" node="1y2r_iAmoub" resolve="derecho" />
+                      <ref role="3cqZAo" node="6VpIoIn6mdR" resolve="derecho" />
                     </node>
                   </node>
                 </node>
               </node>
               <node concept="1Wc70l" id="1y2r_iAmqRa" role="3uHU7B">
                 <node concept="3y3z36" id="1y2r_iAmq_5" role="3uHU7B">
-                  <node concept="37vLTw" id="1y2r_iAmpmH" role="3uHU7B">
-                    <ref role="3cqZAo" node="1y2r_iAmnGO" resolve="izquierdo" />
-                  </node>
                   <node concept="10Nm6u" id="1y2r_iAmqQO" role="3uHU7w" />
+                  <node concept="37vLTw" id="6VpIoIn6oer" role="3uHU7B">
+                    <ref role="3cqZAo" node="6VpIoIn6kcC" resolve="izquierdo" />
+                  </node>
                 </node>
                 <node concept="3y3z36" id="1y2r_iAmqS7" role="3uHU7w">
-                  <node concept="37vLTw" id="1y2r_iAmqRA" role="3uHU7B">
-                    <ref role="3cqZAo" node="1y2r_iAmoub" resolve="derecho" />
-                  </node>
                   <node concept="10Nm6u" id="1y2r_iAmra9" role="3uHU7w" />
+                  <node concept="37vLTw" id="6VpIoIn6og8" role="3uHU7B">
+                    <ref role="3cqZAo" node="6VpIoIn6mdR" resolve="derecho" />
+                  </node>
                 </node>
               </node>
             </node>
