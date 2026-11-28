@@ -1978,7 +1978,11 @@
             <property role="2YJ26v" value="compras" />
           </node>
         </node>
-        <node concept="7CXmI" id="6VpIoIn7tg3" role="lGtFl" />
+        <node concept="7CXmI" id="6VpIoIn7tg3" role="lGtFl">
+          <node concept="7OXhh" id="6VpIoInhxNU" role="7EUXB">
+            <property role="GvXf4" value="true" />
+          </node>
+        </node>
       </node>
     </node>
   </node>
