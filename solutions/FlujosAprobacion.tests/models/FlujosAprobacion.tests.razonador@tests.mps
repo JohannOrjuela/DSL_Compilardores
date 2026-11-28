@@ -53,9 +53,12 @@
         <property id="7698121191689936670" name="minApprovals" index="2mgetL" />
         <reference id="7698121191689936669" name="requiredRole" index="2mgetM" />
       </concept>
-      <concept id="7698121191689828050" name="NewLanguage.structure.Role" flags="ng" index="2mggUX" />
+      <concept id="7698121191689828050" name="NewLanguage.structure.Role" flags="ng" index="2mggUX">
+        <child id="1766095313728384279" name="actors" index="2YKkd3" />
+      </concept>
       <concept id="7698121191690381134" name="NewLanguage.structure.Variable" flags="ng" index="2mipWx">
         <property id="7698121191690381137" name="type" index="2mipWY" />
+        <child id="1766095313728221757" name="initialValue" index="2YKHLD" />
       </concept>
       <concept id="7698121191690470574" name="NewLanguage.structure.BoolLiteral" flags="ng" index="2miNN1">
         <property id="7698121191690470576" name="value" index="2miNNv" />
@@ -74,6 +77,7 @@
         <reference id="7698121191688664617" name="source" index="2mlOT6" />
         <reference id="7698121191688664625" name="event" index="2mlOTu" />
         <child id="7698121191690470578" name="guard" index="2miNNt" />
+        <child id="1766095313728553571" name="actions" index="2YLUKR" />
       </concept>
       <concept id="7698121191688664598" name="NewLanguage.structure.State" flags="ng" index="2mlOTT">
         <property id="7698121191688715400" name="kind" index="2mlwjB" />
@@ -81,12 +85,36 @@
       <concept id="7698121191690616535" name="NewLanguage.structure.VarRef" flags="ng" index="2mtgqS">
         <reference id="7698121191690616537" name="variable" index="2mtgqQ" />
       </concept>
-      <concept id="7698121191690789491" name="NewLanguage.structure.GreaterThan" flags="ng" index="2mtXCs">
-        <child id="7698121191690789494" name="right" index="2mtXCp" />
-        <child id="7698121191690789493" name="left" index="2mtXCq" />
-      </concept>
       <concept id="7698121191690789488" name="NewLanguage.structure.NumberLiteral" flags="ng" index="2mtXCv">
         <property id="7698121191690789490" name="value" index="2mtXCt" />
+      </concept>
+      <concept id="1766095313727499255" name="NewLanguage.structure.Or" flags="ng" index="2YHWmz">
+        <child id="1766095313727499257" name="left" index="2YHWmH" />
+        <child id="1766095313727499258" name="right" index="2YHWmI" />
+      </concept>
+      <concept id="1766095313727499250" name="NewLanguage.structure.And" flags="ng" index="2YHWmA">
+        <child id="1766095313727499253" name="left" index="2YHWmx" />
+        <child id="1766095313727499254" name="right" index="2YHWmy" />
+      </concept>
+      <concept id="1766095313727499259" name="NewLanguage.structure.Not" flags="ng" index="2YHWmJ">
+        <child id="1766095313727499261" name="operand" index="2YHWmD" />
+      </concept>
+      <concept id="1766095313727912815" name="NewLanguage.structure.Compare" flags="ng" index="2YIpkV">
+        <property id="1766095313727912817" name="op" index="2YIpk_" />
+        <child id="1766095313727912818" name="left" index="2YIpkA" />
+        <child id="1766095313727912819" name="right" index="2YIpkB" />
+      </concept>
+      <concept id="1766095313728065481" name="NewLanguage.structure.StringLiteral" flags="ng" index="2YJ26t">
+        <property id="1766095313728065483" name="value" index="2YJ26v" />
+      </concept>
+      <concept id="1766095313728384267" name="NewLanguage.structure.Actor" flags="ng" index="2YKkdv" />
+      <concept id="1766095313728553566" name="NewLanguage.structure.Notify" flags="ng" index="2YLUKa">
+        <property id="1766095313728553569" name="message" index="2YLUKP" />
+        <reference id="1766095313728553568" name="role" index="2YLUKO" />
+      </concept>
+      <concept id="1766095313728553561" name="NewLanguage.structure.SetVariable" flags="ng" index="2YLUKd">
+        <reference id="1766095313728553563" name="var" index="2YLUKf" />
+        <child id="1766095313728553564" name="value" index="2YLUK8" />
       </concept>
     </language>
   </registry>
@@ -175,11 +203,12 @@
           <ref role="2mlOT6" node="6Fle6ZWwNLS" resolve="EnRevision" />
           <ref role="2mlOT5" node="6Fle6ZWwNLT" resolve="Aprobada" />
           <ref role="2mlOTu" node="6Fle6ZWwNLV" resolve="Aprobar" />
-          <node concept="2mtXCs" id="6Fle6ZWDkgS" role="2miNNt">
-            <node concept="2mtgqS" id="6Fle6ZWDkgV" role="2mtXCq">
+          <node concept="2YIpkV" id="6VpIoIn5Zh7" role="2miNNt">
+            <property role="2YIpk_" value="1y2r_iAeZHC/Greater" />
+            <node concept="2mtgqS" id="6VpIoIn5Zha" role="2YIpkA">
               <ref role="2mtgqQ" node="6Fle6ZWBwiG" resolve="monto" />
             </node>
-            <node concept="2mtXCv" id="6Fle6ZWGn8P" role="2mtXCp">
+            <node concept="2mtXCv" id="6VpIoIn5Zhc" role="2YIpkB">
               <property role="2mtXCt" value="1000" />
             </node>
           </node>
@@ -387,11 +416,12 @@
           <ref role="2mlOT6" node="6Fle6ZWGQJB" resolve="EnRevision" />
           <ref role="2mlOT5" node="6Fle6ZWGQJC" resolve="Aprobada" />
           <ref role="2mlOTu" node="6Fle6ZWGQJ$" resolve="Aprobar" />
-          <node concept="2mtXCs" id="6Fle6ZWGQJv" role="2miNNt">
-            <node concept="2mtgqS" id="6Fle6ZWGQJw" role="2mtXCq">
+          <node concept="2YIpkV" id="6VpIoIn5Zhf" role="2miNNt">
+            <property role="2YIpk_" value="1y2r_iAeZHC/Greater" />
+            <node concept="2mtgqS" id="6VpIoIn5Zhi" role="2YIpkA">
               <ref role="2mtgqQ" node="6Fle6ZWGQJE" resolve="monto" />
             </node>
-            <node concept="2mtXCv" id="6Fle6ZWGQJx" role="2mtXCp">
+            <node concept="2mtXCv" id="6VpIoIn5Zhk" role="2YIpkB">
               <property role="2mtXCt" value="1000" />
             </node>
           </node>
@@ -524,18 +554,19 @@
           <ref role="2mlOT6" node="6Fle6ZWE25E" resolve="EnRevision" />
           <ref role="2mlOT5" node="6Fle6ZWE25F" resolve="Aprobada" />
           <ref role="2mlOTu" node="6Fle6ZWE25B" resolve="Aprobar" />
-          <node concept="2mtXCs" id="6Fle6ZWE25y" role="2miNNt">
-            <node concept="2mtgqS" id="6Fle6ZWE25z" role="2mtXCq">
+          <node concept="2YIpkV" id="6VpIoIn5Zhm" role="2miNNt">
+            <property role="2YIpk_" value="1y2r_iAeZHC/Greater" />
+            <node concept="2mtgqS" id="6VpIoIn5Zhp" role="2YIpkA">
               <ref role="2mtgqQ" node="6Fle6ZWE25H" resolve="monto" />
-              <node concept="7CXmI" id="6Fle6ZWGQJT" role="lGtFl">
-                <node concept="1TM$A" id="6Fle6ZWGQJV" role="7EUXB">
-                  <node concept="2PYRI3" id="6Fle6ZWGQJW" role="3lydEf">
-                    <ref role="39XzEq" to="xl33:6Fle6ZWDI2D" />
+              <node concept="7CXmI" id="6VpIoIn5Zht" role="lGtFl">
+                <node concept="1TM$A" id="6VpIoIn5Zhv" role="7EUXB">
+                  <node concept="2PYRI3" id="6VpIoIn5Zhw" role="3lydEf">
+                    <ref role="39XzEq" to="xl33:1y2r_iAkz7a" />
                   </node>
                 </node>
               </node>
             </node>
-            <node concept="2mtXCv" id="6Fle6ZWE25$" role="2mtXCp">
+            <node concept="2mtXCv" id="6VpIoIn5Zhr" role="2YIpkB">
               <property role="2mtXCt" value="1000" />
             </node>
           </node>
@@ -602,11 +633,12 @@
           <ref role="2mlOT6" node="6Fle6ZWGQKd" resolve="EnRevision" />
           <ref role="2mlOT5" node="6Fle6ZWGQKe" resolve="Aprobada" />
           <ref role="2mlOTu" node="6Fle6ZWGQKa" resolve="Aprobar" />
-          <node concept="2mtXCs" id="6Fle6ZWGQK5" role="2miNNt">
-            <node concept="2mtgqS" id="6Fle6ZWGQK6" role="2mtXCq">
+          <node concept="2YIpkV" id="6VpIoIn5Zhy" role="2miNNt">
+            <property role="2YIpk_" value="1y2r_iAeZHC/Greater" />
+            <node concept="2mtgqS" id="6VpIoIn5Zh_" role="2YIpkA">
               <ref role="2mtgqQ" node="6Fle6ZWGQKg" resolve="monto" />
             </node>
-            <node concept="2mtXCv" id="6Fle6ZWGQK7" role="2mtXCp">
+            <node concept="2mtXCv" id="6VpIoIn5ZhB" role="2YIpkB">
               <property role="2mtXCt" value="1000" />
             </node>
           </node>
@@ -683,15 +715,16 @@
           <ref role="2mlOT6" node="6Fle6ZWGQKA" resolve="EnRevision" />
           <ref role="2mlOT5" node="6Fle6ZWGQKB" resolve="Aprobada" />
           <ref role="2mlOTu" node="6Fle6ZWGQKz" resolve="Aprobar" />
-          <node concept="2mtXCs" id="6Fle6ZWGQKu" role="2miNNt">
-            <node concept="2mtgqS" id="6Fle6ZWGQKv" role="2mtXCq">
+          <node concept="2YIpkV" id="6VpIoIn5ZhD" role="2miNNt">
+            <property role="2YIpk_" value="1y2r_iAeZHC/Greater" />
+            <node concept="2mtgqS" id="6VpIoIn5ZhG" role="2YIpkA">
               <ref role="2mtgqQ" node="6Fle6ZWGQKD" resolve="monto" />
             </node>
-            <node concept="2miNN1" id="6Fle6ZWGQKE" role="2mtXCp">
-              <node concept="7CXmI" id="6Fle6ZWGQKG" role="lGtFl">
-                <node concept="1TM$A" id="6Fle6ZWGQKI" role="7EUXB">
-                  <node concept="2PYRI3" id="6Fle6ZWGQKJ" role="3lydEf">
-                    <ref role="39XzEq" to="xl33:6Fle6ZWDliO" />
+            <node concept="2miNN1" id="6VpIoIn5ZhI" role="2YIpkB">
+              <node concept="7CXmI" id="6VpIoIn5ZhK" role="lGtFl">
+                <node concept="1TM$A" id="6VpIoIn5ZhM" role="7EUXB">
+                  <node concept="2PYRI3" id="6VpIoIn5ZhN" role="3lydEf">
+                    <ref role="39XzEq" to="xl33:1y2r_iAlmlE" />
                   </node>
                 </node>
               </node>
@@ -760,21 +793,23 @@
           <ref role="2mlOT6" node="6Fle6ZWGQL0" resolve="EnRevision" />
           <ref role="2mlOT5" node="6Fle6ZWGQL1" resolve="Aprobada" />
           <ref role="2mlOTu" node="6Fle6ZWGQKX" resolve="Aprobar" />
-          <node concept="2mtXCs" id="6Fle6ZWGQKS" role="2miNNt">
-            <node concept="2mtgqS" id="6Fle6ZWGQKT" role="2mtXCq">
+          <node concept="2YIpkV" id="6VpIoIn7tfa" role="2miNNt">
+            <property role="2YIpk_" value="1y2r_iAeZHC/Greater" />
+            <node concept="2mtgqS" id="6VpIoIn7tfd" role="2YIpkA">
               <ref role="2mtgqQ" node="6Fle6ZWGQL3" resolve="monto" />
             </node>
-            <node concept="2mtXCs" id="6Fle6ZWGQL4" role="2mtXCp">
-              <node concept="2mtXCv" id="6Fle6ZWGQL8" role="2mtXCq">
+            <node concept="2YIpkV" id="6VpIoIn7tff" role="2YIpkB">
+              <property role="2YIpk_" value="1y2r_iAeZHC/Greater" />
+              <node concept="2mtXCv" id="6VpIoIn7tfj" role="2YIpkA">
                 <property role="2mtXCt" value="1000" />
               </node>
-              <node concept="2mtXCv" id="6Fle6ZWGQLa" role="2mtXCp">
+              <node concept="2mtXCv" id="6VpIoIn7tfl" role="2YIpkB">
                 <property role="2mtXCt" value="5" />
               </node>
-              <node concept="7CXmI" id="6Fle6ZWGQLg" role="lGtFl">
-                <node concept="1TM$A" id="6Fle6ZWGQLi" role="7EUXB">
-                  <node concept="2PYRI3" id="6Fle6ZWGQLj" role="3lydEf">
-                    <ref role="39XzEq" to="xl33:6Fle6ZWFY0m" />
+              <node concept="7CXmI" id="6VpIoIn7tfn" role="lGtFl">
+                <node concept="1TM$A" id="6VpIoIn7tfp" role="7EUXB">
+                  <node concept="2PYRI3" id="6VpIoIn7tfq" role="3lydEf">
+                    <ref role="39XzEq" to="xl33:1y2r_iAlmlE" />
                   </node>
                 </node>
               </node>
@@ -843,11 +878,12 @@
           <ref role="2mlOT6" node="6Fle6ZWGQL$" resolve="EnRevision" />
           <ref role="2mlOT5" node="6Fle6ZWGQL_" resolve="Aprobada" />
           <ref role="2mlOTu" node="6Fle6ZWGQLx" resolve="Aprobar" />
-          <node concept="2mtXCs" id="6Fle6ZWGQLs" role="2miNNt">
-            <node concept="2mtgqS" id="6Fle6ZWGQLt" role="2mtXCq">
+          <node concept="2YIpkV" id="6VpIoIn5Zib" role="2miNNt">
+            <property role="2YIpk_" value="1y2r_iAeZHC/Greater" />
+            <node concept="2mtgqS" id="6VpIoIn5Zie" role="2YIpkA">
               <ref role="2mtgqQ" node="6Fle6ZWGQLB" resolve="monto" />
             </node>
-            <node concept="2mtXCv" id="6Fle6ZWGQLu" role="2mtXCp">
+            <node concept="2mtXCv" id="6VpIoIn5Zig" role="2YIpkB">
               <property role="2mtXCt" value="1000" />
             </node>
           </node>
@@ -858,7 +894,7 @@
           <ref role="2mlOT5" node="6Fle6ZWGQLA" resolve="Rechazada" />
           <ref role="2mlOTu" node="6Fle6ZWGQLy" resolve="Rechazar" />
           <node concept="2mtgqS" id="6Fle6ZWGQLC" role="2miNNt">
-            <ref role="2mtgqQ" node="6Fle6ZWBwiG" resolve="monto" />
+            <ref role="2mtgqQ" node="6Fle6ZWGQLB" resolve="monto" />
             <node concept="7CXmI" id="6Fle6ZWGQLD" role="lGtFl">
               <node concept="1TM$A" id="6Fle6ZWGQLF" role="7EUXB">
                 <node concept="2PYRI3" id="6Fle6ZWGQLG" role="3lydEf">
@@ -996,14 +1032,6 @@
           <ref role="2mlOT6" node="6Fle6ZWGQLX" resolve="EnRevision" />
           <ref role="2mlOT5" node="6Fle6ZWGQLY" resolve="Aprobada" />
           <ref role="2mlOTu" node="6Fle6ZWGQLU" resolve="Aprobar" />
-          <node concept="2mtXCs" id="6Fle6ZWGQLP" role="2miNNt">
-            <node concept="2mtgqS" id="6Fle6ZWGQLQ" role="2mtXCq">
-              <ref role="2mtgqQ" node="6Fle6ZWGQM0" resolve="monto" />
-            </node>
-            <node concept="2mtXCv" id="6Fle6ZWGQLR" role="2mtXCp">
-              <property role="2mtXCt" value="1000" />
-            </node>
-          </node>
           <node concept="2rqxmr" id="6Fle6ZWGSQm" role="lGtFl">
             <ref role="1BTHP0" node="6Fle6ZWGQLY" resolve="Aprobada" />
             <node concept="3KTrbX" id="6Fle6ZWGSQn" role="3KTr4d">
@@ -1017,6 +1045,15 @@
             </node>
             <node concept="3KTrbX" id="6Fle6ZWGSQq" role="3KTr4d">
               <ref role="3AHY9a" node="6Fle6ZWGQLZ" resolve="Rechazada" />
+            </node>
+          </node>
+          <node concept="2YIpkV" id="6VpIoIn5Zij" role="2miNNt">
+            <property role="2YIpk_" value="1y2r_iAeZHC/Greater" />
+            <node concept="2mtgqS" id="6VpIoIn5Zim" role="2YIpkA">
+              <ref role="2mtgqQ" node="6Fle6ZWGQM0" resolve="monto" />
+            </node>
+            <node concept="2mtXCv" id="6VpIoIn5Zio" role="2YIpkB">
+              <property role="2mtXCt" value="1000" />
             </node>
           </node>
         </node>
@@ -1141,11 +1178,12 @@
           <ref role="2mlOT6" node="6Fle6ZWH41x" resolve="EnRevision" />
           <ref role="2mlOT5" node="6Fle6ZWH41y" resolve="Aprobada" />
           <ref role="2mlOTu" node="6Fle6ZWH41u" resolve="Aprobar" />
-          <node concept="2mtXCs" id="6Fle6ZWH41p" role="2miNNt">
-            <node concept="2mtgqS" id="6Fle6ZWH41q" role="2mtXCq">
+          <node concept="2YIpkV" id="6VpIoIn5Ziq" role="2miNNt">
+            <property role="2YIpk_" value="1y2r_iAeZHC/Greater" />
+            <node concept="2mtgqS" id="6VpIoIn5Zit" role="2YIpkA">
               <ref role="2mtgqQ" node="6Fle6ZWH41$" resolve="monto" />
             </node>
-            <node concept="2mtXCv" id="6Fle6ZWH41r" role="2mtXCp">
+            <node concept="2mtXCv" id="6VpIoIn5Ziv" role="2YIpkB">
               <property role="2mtXCt" value="1000" />
             </node>
           </node>
@@ -1212,17 +1250,18 @@
           <ref role="2mlOT6" node="6Fle6ZWHuSB" resolve="EnRevision" />
           <ref role="2mlOT5" node="6Fle6ZWHuSC" resolve="Aprobada" />
           <ref role="2mlOTu" node="6Fle6ZWHuS$" resolve="Aprobar" />
-          <node concept="2mtXCs" id="6Fle6ZWHuSv" role="2miNNt">
-            <node concept="2mtgqS" id="6Fle6ZWHuSw" role="2mtXCq">
+          <node concept="2YIpkV" id="6VpIoIn5Ziz" role="2miNNt">
+            <property role="2YIpk_" value="1y2r_iAeZHC/Greater" />
+            <node concept="2mtgqS" id="6VpIoIn5ZiA" role="2YIpkA">
               <ref role="2mtgqQ" node="6Fle6ZWHuSE" resolve="monto" />
-              <node concept="2rqxmr" id="6Fle6ZWHuST" role="lGtFl">
+              <node concept="2rqxmr" id="6VpIoIn5ZiE" role="lGtFl">
                 <ref role="1BTHP0" node="6Fle6ZWHuSE" resolve="monto" />
-                <node concept="3KTrbX" id="6Fle6ZWHuT5" role="3KTr4d">
+                <node concept="3KTrbX" id="6VpIoIn5ZiF" role="3KTr4d">
                   <ref role="3AHY9a" node="6Fle6ZWHuSE" resolve="monto" />
                 </node>
               </node>
             </node>
-            <node concept="2mtXCv" id="6Fle6ZWHuSx" role="2mtXCp">
+            <node concept="2mtXCv" id="6VpIoIn5ZiC" role="2YIpkB">
               <property role="2mtXCt" value="1000" />
             </node>
           </node>
@@ -1311,6 +1350,635 @@
           <property role="TrG5h" value="diasSolicitados" />
           <property role="2mipWY" value="6Fle6ZWBatb/Number" />
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1lH9Xt" id="6VpIoIn6hYU">
+    <property role="3DII0k" value="2hh8MJdVwqX/command" />
+    <property role="TrG5h" value="DetectaErroresDeTipos" />
+    <node concept="1qefOq" id="6VpIoIn6hYV" role="1SKRRt">
+      <node concept="2mlOQO" id="1y2r_iAer06" role="1qenE9">
+        <property role="TrG5h" value="ComprasConCondicionales" />
+        <ref role="2mlOTf" node="1y2r_iAer0i" resolve="Borrador" />
+        <node concept="2mlOTa" id="6VpIoIn7_V8" role="2mlOT4">
+          <property role="TrG5h" value="PruebaCondicionales" />
+          <ref role="2mlOT6" node="1y2r_iAer0j" resolve="EnRevision" />
+          <ref role="2mlOT5" node="1y2r_iAer0k" resolve="Aprobada" />
+          <ref role="2mlOTu" node="1y2r_iAer0g" resolve="Aprobar" />
+          <node concept="2YHWmA" id="6VpIoIn7_Vj" role="2miNNt">
+            <node concept="2YIpkV" id="6VpIoIn7_Vm" role="2YHWmx">
+              <property role="2YIpk_" value="1y2r_iAeZHE/Less" />
+              <node concept="2mtXCv" id="6VpIoIn7_Vq" role="2YIpkA">
+                <property role="2mtXCt" value="0" />
+              </node>
+              <node concept="2mtgqS" id="6VpIoIn7_Vs" role="2YIpkB">
+                <ref role="2mtgqQ" node="1y2r_iAer0m" resolve="monto" />
+              </node>
+            </node>
+            <node concept="2YIpkV" id="6VpIoIn7_Vx" role="2YHWmy">
+              <property role="2YIpk_" value="1y2r_iAeZHF/LessOrEqual" />
+              <node concept="2mtgqS" id="6VpIoIn7_V_" role="2YIpkA">
+                <ref role="2mtgqQ" node="1y2r_iAer0m" resolve="monto" />
+              </node>
+              <node concept="2mtXCv" id="6VpIoIn7_VB" role="2YIpkB">
+                <property role="2mtXCt" value="1000" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2mlOTa" id="6VpIoIn7tb$" role="2mlOT4">
+          <property role="TrG5h" value="PruebaGuardaTexto" />
+          <ref role="2mlOT6" node="1y2r_iAer0i" resolve="Borrador" />
+          <ref role="2mlOT5" node="1y2r_iAer0l" resolve="Rechazada" />
+          <ref role="2mlOTu" node="1y2r_iAer0h" resolve="Rechazar" />
+          <node concept="2YJ26t" id="6VpIoIn7tb_" role="2miNNt">
+            <property role="2YJ26v" value="compras" />
+            <node concept="7CXmI" id="6VpIoIn7tbA" role="lGtFl">
+              <node concept="1TM$A" id="6VpIoIn7tbC" role="7EUXB">
+                <node concept="2PYRI3" id="6VpIoIn7tbD" role="3lydEf">
+                  <ref role="39XzEq" to="xl33:1y2r_iAsMAd" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2mggUX" id="1y2r_iAer07" role="2mggUV">
+          <property role="TrG5h" value="SupervisorCompras" />
+          <node concept="2YKkdv" id="1y2r_iAhs9n" role="2YKkd3">
+            <property role="TrG5h" value="Luis" />
+          </node>
+          <node concept="2YKkdv" id="1y2r_iAhs9k" role="2YKkd3">
+            <property role="TrG5h" value="Ana" />
+          </node>
+        </node>
+        <node concept="2mlOTa" id="1y2r_iAer08" role="2mlOT4">
+          <property role="TrG5h" value="EnviarARevision" />
+          <ref role="2mlOT6" node="1y2r_iAer0i" resolve="Borrador" />
+          <ref role="2mlOTu" node="1y2r_iAer0f" resolve="EnviarSolicitud" />
+          <ref role="2mlOT5" node="1y2r_iAer0j" resolve="EnRevision" />
+          <node concept="2YIpkV" id="1y2r_iAgb8M" role="2miNNt">
+            <property role="2YIpk_" value="1y2r_iAeZHG/Equal" />
+            <node concept="2mtgqS" id="1y2r_iAgb8V" role="2YIpkA">
+              <ref role="2mtgqQ" node="1y2r_iAgb8U" resolve="area" />
+            </node>
+            <node concept="2mtXCv" id="6VpIoIn6hZb" role="2YIpkB">
+              <property role="2mtXCt" value="1000" />
+            </node>
+            <node concept="7CXmI" id="6VpIoIn7taB" role="lGtFl">
+              <node concept="1TM$A" id="6VpIoIn7taD" role="7EUXB">
+                <node concept="2PYRI3" id="6VpIoIn7taE" role="3lydEf">
+                  <ref role="39XzEq" to="xl33:1y2r_iAmsBx" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2mlOTa" id="1y2r_iAer0a" role="2mlOT4">
+          <property role="TrG5h" value="AprobarSolicitud" />
+          <ref role="2mlOT6" node="1y2r_iAer0j" resolve="EnRevision" />
+          <ref role="2mlOT5" node="1y2r_iAer0k" resolve="Aprobada" />
+          <ref role="2mlOTu" node="1y2r_iAer0g" resolve="Aprobar" />
+          <node concept="2YLUKa" id="1y2r_iAiNqi" role="2YLUKR">
+            <property role="2YLUKP" value="Compra aprobada" />
+            <ref role="2YLUKO" node="1y2r_iAer07" resolve="SupervisorCompras" />
+          </node>
+          <node concept="2YLUKd" id="1y2r_iAiNqd" role="2YLUKR">
+            <ref role="2YLUKf" node="1y2r_iAer0n" resolve="urgente" />
+            <node concept="2mtXCv" id="6VpIoIn7tb4" role="2YLUK8">
+              <property role="2mtXCt" value="5" />
+              <node concept="7CXmI" id="6VpIoIn7tb6" role="lGtFl">
+                <node concept="1TM$A" id="6VpIoIn7tb8" role="7EUXB">
+                  <node concept="2PYRI3" id="6VpIoIn7tb9" role="3lydEf">
+                    <ref role="39XzEq" to="xl33:1y2r_iArTfl" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="2YIpkV" id="6VpIoIn7taF" role="2miNNt">
+            <property role="2YIpk_" value="1y2r_iAeZHH/notEqual" />
+            <node concept="2mtgqS" id="6VpIoIn7taI" role="2YIpkA">
+              <ref role="2mtgqQ" node="1y2r_iAer0m" resolve="monto" />
+            </node>
+            <node concept="2YJ26t" id="6VpIoIn7taK" role="2YIpkB">
+              <property role="2YJ26v" value="compras" />
+            </node>
+            <node concept="7CXmI" id="6VpIoIn7taM" role="lGtFl">
+              <node concept="1TM$A" id="6VpIoIn7taO" role="7EUXB">
+                <node concept="2PYRI3" id="6VpIoIn7taP" role="3lydEf">
+                  <ref role="39XzEq" to="xl33:1y2r_iAmsBx" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2mlOTa" id="1y2r_iAer0e" role="2mlOT4">
+          <property role="TrG5h" value="RechazarSolicitud" />
+          <ref role="2mlOT6" node="1y2r_iAer0j" resolve="EnRevision" />
+          <ref role="2mlOT5" node="1y2r_iAer0l" resolve="Rechazada" />
+          <ref role="2mlOTu" node="1y2r_iAer0h" resolve="Rechazar" />
+          <node concept="2YHWmz" id="1y2r_iAer0o" role="2miNNt">
+            <node concept="2YHWmA" id="1y2r_iAer0B" role="2YHWmI">
+              <node concept="2YHWmJ" id="1y2r_iAer0H" role="2YHWmy">
+                <node concept="2mtgqS" id="6VpIoIn6hZ4" role="2YHWmD">
+                  <ref role="2mtgqQ" node="1y2r_iAer0m" resolve="monto" />
+                  <node concept="7CXmI" id="6VpIoIn6hZ6" role="lGtFl">
+                    <node concept="1TM$A" id="6VpIoIn6hZ8" role="7EUXB">
+                      <node concept="2PYRI3" id="6VpIoIn6hZ9" role="3lydEf">
+                        <ref role="39XzEq" to="xl33:1y2r_iApWgq" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="2mtXCv" id="6VpIoIn7taR" role="2YHWmx">
+                <property role="2mtXCt" value="5" />
+                <node concept="7CXmI" id="6VpIoIn7taT" role="lGtFl">
+                  <node concept="1TM$A" id="6VpIoIn7taV" role="7EUXB">
+                    <node concept="2PYRI3" id="6VpIoIn7taW" role="3lydEf">
+                      <ref role="39XzEq" to="xl33:1y2r_iAmyIY" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="2mtgqS" id="6VpIoIn7taY" role="2YHWmH">
+              <ref role="2mtgqQ" node="1y2r_iAgb8U" resolve="area" />
+              <node concept="7CXmI" id="6VpIoIn7tb0" role="lGtFl">
+                <node concept="1TM$A" id="6VpIoIn7tb2" role="7EUXB">
+                  <node concept="2PYRI3" id="6VpIoIn7tb3" role="3lydEf">
+                    <ref role="39XzEq" to="xl33:1y2r_iAnnX1" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2mlOT2" id="1y2r_iAer0f" role="2mlOT0">
+          <property role="TrG5h" value="EnviarSolicitud" />
+        </node>
+        <node concept="2mlOT2" id="1y2r_iAer0g" role="2mlOT0">
+          <property role="TrG5h" value="Aprobar" />
+        </node>
+        <node concept="2mlOT2" id="1y2r_iAer0h" role="2mlOT0">
+          <property role="TrG5h" value="Rechazar" />
+        </node>
+        <node concept="2mlOTT" id="1y2r_iAer0i" role="2mlOTO">
+          <property role="TrG5h" value="Borrador" />
+          <property role="2mlwjB" value="6Fle6ZWwNM1/Initial" />
+        </node>
+        <node concept="2mlOTT" id="1y2r_iAer0j" role="2mlOTO">
+          <property role="TrG5h" value="EnRevision" />
+          <property role="2mlwjB" value="6Fle6ZWwNM5/Approval" />
+        </node>
+        <node concept="2mlOTT" id="1y2r_iAer0k" role="2mlOTO">
+          <property role="TrG5h" value="Aprobada" />
+          <property role="2mlwjB" value="6Fle6ZWwNM6/Final" />
+        </node>
+        <node concept="2mlOTT" id="1y2r_iAer0l" role="2mlOTO">
+          <property role="TrG5h" value="Rechazada" />
+          <property role="2mlwjB" value="6Fle6ZWwNM6/Final" />
+        </node>
+        <node concept="2mipWx" id="1y2r_iAer0m" role="2mipWX">
+          <property role="TrG5h" value="monto" />
+          <property role="2mipWY" value="6Fle6ZWBatb/Number" />
+          <node concept="2miNN1" id="6VpIoIn6hYX" role="2YKHLD">
+            <node concept="7CXmI" id="6VpIoIn6hYZ" role="lGtFl">
+              <node concept="1TM$A" id="6VpIoIn6hZ1" role="7EUXB">
+                <node concept="2PYRI3" id="6VpIoIn6hZ2" role="3lydEf">
+                  <ref role="39XzEq" to="xl33:1y2r_iAqTpd" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2mipWx" id="1y2r_iAer0n" role="2mipWX">
+          <property role="TrG5h" value="urgente" />
+          <property role="2mipWY" value="6Fle6ZWBatc/Bool" />
+          <node concept="2miNN1" id="1y2r_iAgMO7" role="2YKHLD" />
+        </node>
+        <node concept="2mipWx" id="1y2r_iAer0r" role="2mipWX">
+          <property role="TrG5h" value="bloqueada" />
+          <property role="2mipWY" value="6Fle6ZWBatc/Bool" />
+          <node concept="2YHWmA" id="6VpIoIn7tba" role="2YKHLD">
+            <node concept="2YHWmz" id="6VpIoIn7tbo" role="2YHWmx">
+              <node concept="2miNN1" id="6VpIoIn7tbs" role="2YHWmH">
+                <property role="2miNNv" value="true" />
+              </node>
+              <node concept="2mtXCv" id="6VpIoIn7tbu" role="2YHWmI">
+                <property role="2mtXCt" value="7" />
+                <node concept="7CXmI" id="6VpIoIn7tbw" role="lGtFl">
+                  <node concept="1TM$A" id="6VpIoIn7tby" role="7EUXB">
+                    <node concept="2PYRI3" id="6VpIoIn7tbz" role="3lydEf">
+                      <ref role="39XzEq" to="xl33:1y2r_iAnnXi" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="2mtXCv" id="6VpIoIn7tbi" role="2YHWmy">
+              <property role="2mtXCt" value="5" />
+              <node concept="7CXmI" id="6VpIoIn7tbk" role="lGtFl">
+                <node concept="1TM$A" id="6VpIoIn7tbm" role="7EUXB">
+                  <node concept="2PYRI3" id="6VpIoIn7tbn" role="3lydEf">
+                    <ref role="39XzEq" to="xl33:1y2r_iAm_Lv" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2mipWx" id="1y2r_iAgb8U" role="2mipWX">
+          <property role="TrG5h" value="area" />
+          <property role="2mipWY" value="6Fle6ZWBatd/String" />
+          <node concept="2YJ26t" id="1y2r_iAgMO9" role="2YKHLD">
+            <property role="2YJ26v" value="compras" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1lH9Xt" id="6VpIoIn7te1">
+    <property role="3DII0k" value="2hh8MJdVwqX/command" />
+    <property role="TrG5h" value="AlcanceDeAcciones" />
+    <node concept="1qefOq" id="6VpIoIn7te2" role="1SKRRt">
+      <node concept="2mlOQO" id="6VpIoIn7te8" role="1qenE9">
+        <property role="TrG5h" value="ComprasConCondicionales" />
+        <ref role="2mlOTf" node="6VpIoIn7tep" resolve="Borrador" />
+        <node concept="2mggUX" id="6VpIoIn7te9" role="2mggUV">
+          <property role="TrG5h" value="SupervisorCompras" />
+          <node concept="2YKkdv" id="6VpIoIn7tea" role="2YKkd3">
+            <property role="TrG5h" value="Luis" />
+          </node>
+          <node concept="2YKkdv" id="6VpIoIn7teb" role="2YKkd3">
+            <property role="TrG5h" value="Ana" />
+          </node>
+        </node>
+        <node concept="2mlOTa" id="6VpIoIn7tec" role="2mlOT4">
+          <property role="TrG5h" value="EnviarARevision" />
+          <ref role="2mlOT6" node="6VpIoIn7tep" resolve="Borrador" />
+          <ref role="2mlOTu" node="6VpIoIn7tem" resolve="EnviarSolicitud" />
+          <ref role="2mlOT5" node="6VpIoIn7teq" resolve="EnRevision" />
+          <node concept="2YIpkV" id="6VpIoIn7ted" role="2miNNt">
+            <property role="2YIpk_" value="1y2r_iAeZHG/Equal" />
+            <node concept="2YJ26t" id="1y2r_iAgb8R" role="2YIpkB">
+              <property role="2YJ26v" value="compras" />
+            </node>
+            <node concept="2mtgqS" id="6VpIoIn7tee" role="2YIpkA">
+              <ref role="2mtgqQ" node="6VpIoIn7tex" resolve="area" />
+            </node>
+          </node>
+        </node>
+        <node concept="2mlOTa" id="6VpIoIn7tef" role="2mlOT4">
+          <property role="TrG5h" value="AprobarSolicitud" />
+          <ref role="2mlOT6" node="6VpIoIn7teq" resolve="EnRevision" />
+          <ref role="2mlOT5" node="6VpIoIn7ter" resolve="Aprobada" />
+          <ref role="2mlOTu" node="6VpIoIn7ten" resolve="Aprobar" />
+          <node concept="2YIpkV" id="1y2r_iAf$Z1" role="2miNNt">
+            <property role="2YIpk_" value="1y2r_iAeZHD/GreaterOrEqual" />
+            <node concept="2mtgqS" id="1y2r_iAf$Z4" role="2YIpkA">
+              <ref role="2mtgqQ" node="6VpIoIn7tet" resolve="monto" />
+            </node>
+            <node concept="2mtXCv" id="1y2r_iAf$Z6" role="2YIpkB">
+              <property role="2mtXCt" value="1000" />
+            </node>
+          </node>
+          <node concept="2YLUKa" id="6VpIoIn7teg" role="2YLUKR">
+            <property role="2YLUKP" value="Compra aprobada" />
+            <ref role="2YLUKO" node="6VpIoIn7te9" resolve="SupervisorCompras" />
+            <node concept="2rqxmr" id="6VpIoIn7teR" role="lGtFl">
+              <ref role="1BTHP0" node="6VpIoIn7te9" resolve="SupervisorCompras" />
+              <node concept="3KTrbX" id="6VpIoIn7teS" role="3KTr4d">
+                <ref role="3AHY9a" node="6VpIoIn7te9" resolve="SupervisorCompras" />
+              </node>
+            </node>
+          </node>
+          <node concept="2YLUKd" id="6VpIoIn7teh" role="2YLUKR">
+            <ref role="2YLUKf" node="6VpIoIn7teu" resolve="urgente" />
+            <node concept="2miNN1" id="1y2r_iAiNqf" role="2YLUK8" />
+            <node concept="2rqxmr" id="6VpIoIn7teL" role="lGtFl">
+              <ref role="1BTHP0" node="6VpIoIn7teu" resolve="urgente" />
+              <node concept="3KTrbX" id="6VpIoIn7teM" role="3KTr4d">
+                <ref role="3AHY9a" node="6VpIoIn7tet" resolve="monto" />
+              </node>
+              <node concept="3KTrbX" id="6VpIoIn7teN" role="3KTr4d">
+                <ref role="3AHY9a" node="6VpIoIn7teu" resolve="urgente" />
+              </node>
+              <node concept="3KTrbX" id="6VpIoIn7teO" role="3KTr4d">
+                <ref role="3AHY9a" node="6VpIoIn7tew" resolve="bloqueada" />
+              </node>
+              <node concept="3KTrbX" id="6VpIoIn7teP" role="3KTr4d">
+                <ref role="3AHY9a" node="6VpIoIn7tex" resolve="area" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2mlOTa" id="6VpIoIn7tei" role="2mlOT4">
+          <property role="TrG5h" value="RechazarSolicitud" />
+          <ref role="2mlOT6" node="6VpIoIn7teq" resolve="EnRevision" />
+          <ref role="2mlOT5" node="6VpIoIn7tes" resolve="Rechazada" />
+          <ref role="2mlOTu" node="6VpIoIn7teo" resolve="Rechazar" />
+          <node concept="2YHWmz" id="6VpIoIn7tej" role="2miNNt">
+            <node concept="2YHWmA" id="6VpIoIn7tek" role="2YHWmI">
+              <node concept="2mtgqS" id="1y2r_iAer0F" role="2YHWmx">
+                <ref role="2mtgqQ" node="6VpIoIn7teu" resolve="urgente" />
+              </node>
+              <node concept="2YHWmJ" id="6VpIoIn7tel" role="2YHWmy">
+                <node concept="2mtgqS" id="1y2r_iAer0K" role="2YHWmD">
+                  <ref role="2mtgqQ" node="6VpIoIn7tew" resolve="bloqueada" />
+                </node>
+              </node>
+            </node>
+            <node concept="2mtgqS" id="1y2r_iAer0_" role="2YHWmH">
+              <ref role="2mtgqQ" node="6VpIoIn7tew" resolve="bloqueada" />
+            </node>
+          </node>
+        </node>
+        <node concept="2mlOT2" id="6VpIoIn7tem" role="2mlOT0">
+          <property role="TrG5h" value="EnviarSolicitud" />
+        </node>
+        <node concept="2mlOT2" id="6VpIoIn7ten" role="2mlOT0">
+          <property role="TrG5h" value="Aprobar" />
+        </node>
+        <node concept="2mlOT2" id="6VpIoIn7teo" role="2mlOT0">
+          <property role="TrG5h" value="Rechazar" />
+        </node>
+        <node concept="2mlOTT" id="6VpIoIn7tep" role="2mlOTO">
+          <property role="TrG5h" value="Borrador" />
+          <property role="2mlwjB" value="6Fle6ZWwNM1/Initial" />
+        </node>
+        <node concept="2mlOTT" id="6VpIoIn7teq" role="2mlOTO">
+          <property role="TrG5h" value="EnRevision" />
+          <property role="2mlwjB" value="6Fle6ZWwNM5/Approval" />
+        </node>
+        <node concept="2mlOTT" id="6VpIoIn7ter" role="2mlOTO">
+          <property role="TrG5h" value="Aprobada" />
+          <property role="2mlwjB" value="6Fle6ZWwNM6/Final" />
+        </node>
+        <node concept="2mlOTT" id="6VpIoIn7tes" role="2mlOTO">
+          <property role="TrG5h" value="Rechazada" />
+          <property role="2mlwjB" value="6Fle6ZWwNM6/Final" />
+        </node>
+        <node concept="2mipWx" id="6VpIoIn7tet" role="2mipWX">
+          <property role="TrG5h" value="monto" />
+          <property role="2mipWY" value="6Fle6ZWBatb/Number" />
+          <node concept="2mtXCv" id="1y2r_iAgMO5" role="2YKHLD">
+            <property role="2mtXCt" value="0" />
+          </node>
+        </node>
+        <node concept="2mipWx" id="6VpIoIn7teu" role="2mipWX">
+          <property role="TrG5h" value="urgente" />
+          <property role="2mipWY" value="6Fle6ZWBatc/Bool" />
+          <node concept="2miNN1" id="6VpIoIn7tev" role="2YKHLD" />
+        </node>
+        <node concept="2mipWx" id="6VpIoIn7tew" role="2mipWX">
+          <property role="TrG5h" value="bloqueada" />
+          <property role="2mipWY" value="6Fle6ZWBatc/Bool" />
+          <node concept="2miNN1" id="1y2r_iAgMO8" role="2YKHLD" />
+        </node>
+        <node concept="2mipWx" id="6VpIoIn7tex" role="2mipWX">
+          <property role="TrG5h" value="area" />
+          <property role="2mipWY" value="6Fle6ZWBatd/String" />
+          <node concept="2YJ26t" id="6VpIoIn7tey" role="2YKHLD">
+            <property role="2YJ26v" value="compras" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1qefOq" id="6VpIoIn7te6" role="1SKRRt">
+      <node concept="2mlOQO" id="6VpIoIn7tez" role="1qenE9">
+        <property role="TrG5h" value="SolicitudCompra" />
+        <ref role="2mlOTf" node="6VpIoIn7teG" resolve="Borrador" />
+        <node concept="2mggUX" id="6VpIoIn7te$" role="2mggUV">
+          <property role="TrG5h" value="SupervisorExterno" />
+        </node>
+        <node concept="2mlOTa" id="6VpIoIn7te_" role="2mlOT4">
+          <property role="TrG5h" value="EnviarARevision" />
+          <ref role="2mlOT6" node="6VpIoIn7teG" resolve="Borrador" />
+          <ref role="2mlOTu" node="6VpIoIn7teD" resolve="EnviarSolicitud" />
+          <ref role="2mlOT5" node="6VpIoIn7teH" resolve="EnRevision" />
+          <node concept="2miNN1" id="6VpIoIn7teA" role="2miNNt">
+            <property role="2miNNv" value="true" />
+          </node>
+        </node>
+        <node concept="2mlOTa" id="6VpIoIn7teB" role="2mlOT4">
+          <property role="TrG5h" value="AprobarSolicitud" />
+          <ref role="2mlOT6" node="6VpIoIn7teH" resolve="EnRevision" />
+          <ref role="2mlOT5" node="6VpIoIn7teI" resolve="Aprobada" />
+          <ref role="2mlOTu" node="6VpIoIn7teE" resolve="Aprobar" />
+          <node concept="2YIpkV" id="1y2r_iAjClR" role="2miNNt">
+            <property role="2YIpk_" value="1y2r_iAeZHC/Greater" />
+            <node concept="2mtgqS" id="1y2r_iAjClU" role="2YIpkA">
+              <ref role="2mtgqQ" node="6VpIoIn7teK" resolve="montoExterno" />
+            </node>
+            <node concept="2mtXCv" id="1y2r_iAjClW" role="2YIpkB">
+              <property role="2mtXCt" value="1000" />
+            </node>
+          </node>
+        </node>
+        <node concept="2mlOTa" id="6VpIoIn7teC" role="2mlOT4">
+          <property role="TrG5h" value="RechazarSolicitud" />
+          <ref role="2mlOT6" node="6VpIoIn7teH" resolve="EnRevision" />
+          <ref role="2mlOT5" node="6VpIoIn7teJ" resolve="Rechazada" />
+          <ref role="2mlOTu" node="6VpIoIn7teF" resolve="Rechazar" />
+        </node>
+        <node concept="2mlOT2" id="6VpIoIn7teD" role="2mlOT0">
+          <property role="TrG5h" value="EnviarSolicitud" />
+        </node>
+        <node concept="2mlOT2" id="6VpIoIn7teE" role="2mlOT0">
+          <property role="TrG5h" value="Aprobar" />
+        </node>
+        <node concept="2mlOT2" id="6VpIoIn7teF" role="2mlOT0">
+          <property role="TrG5h" value="Rechazar" />
+        </node>
+        <node concept="2mlOTT" id="6VpIoIn7teG" role="2mlOTO">
+          <property role="TrG5h" value="Borrador" />
+          <property role="2mlwjB" value="6Fle6ZWwNM1/Initial" />
+        </node>
+        <node concept="2mlOTT" id="6VpIoIn7teH" role="2mlOTO">
+          <property role="TrG5h" value="EnRevision" />
+          <property role="2mlwjB" value="6Fle6ZWwNM5/Approval" />
+        </node>
+        <node concept="2mlOTT" id="6VpIoIn7teI" role="2mlOTO">
+          <property role="TrG5h" value="Aprobada" />
+          <property role="2mlwjB" value="6Fle6ZWwNM6/Final" />
+        </node>
+        <node concept="2mlOTT" id="6VpIoIn7teJ" role="2mlOTO">
+          <property role="TrG5h" value="Rechazada" />
+          <property role="2mlwjB" value="6Fle6ZWwNM6/Final" />
+        </node>
+        <node concept="2mipWx" id="6VpIoIn7teK" role="2mipWX">
+          <property role="TrG5h" value="montoExterno" />
+          <property role="2mipWY" value="6Fle6ZWBatb/Number" />
+          <node concept="2mtXCv" id="1y2r_iAjClO" role="2YKHLD">
+            <property role="2mtXCt" value="0" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1lH9Xt" id="6VpIoIn7tfr">
+    <property role="3DII0k" value="2hh8MJdVwqX/command" />
+    <property role="TrG5h" value="ComprasConCondicionalesValida" />
+    <node concept="1qefOq" id="6VpIoIn7tfs" role="1SKRRt">
+      <node concept="2mlOQO" id="6VpIoIn7tfu" role="1qenE9">
+        <property role="TrG5h" value="ComprasConCondicionales" />
+        <ref role="2mlOTf" node="6VpIoIn7tfR" resolve="Borrador" />
+        <node concept="2mggUX" id="6VpIoIn7tfv" role="2mggUV">
+          <property role="TrG5h" value="SupervisorCompras" />
+          <node concept="2YKkdv" id="6VpIoIn7tfw" role="2YKkd3">
+            <property role="TrG5h" value="Luis" />
+          </node>
+          <node concept="2YKkdv" id="6VpIoIn7tfx" role="2YKkd3">
+            <property role="TrG5h" value="Ana" />
+          </node>
+        </node>
+        <node concept="2mlOTa" id="6VpIoIn7_VW" role="2mlOT4">
+          <property role="TrG5h" value="RevisarCompraGrande" />
+          <ref role="2mlOT6" node="6VpIoIn7tfR" resolve="Borrador" />
+          <ref role="2mlOT5" node="6VpIoIn7tfS" resolve="EnRevision" />
+          <ref role="2mlOTu" node="6VpIoIn7tfO" resolve="EnviarSolicitud" />
+          <node concept="2YHWmA" id="6VpIoIn7_VX" role="2miNNt">
+            <node concept="2YIpkV" id="6VpIoIn7_W0" role="2YHWmx">
+              <property role="2YIpk_" value="1y2r_iAeZHD/GreaterOrEqual" />
+              <node concept="2mtgqS" id="6VpIoIn7_W4" role="2YIpkA">
+                <ref role="2mtgqQ" node="6VpIoIn7tfV" resolve="monto" />
+              </node>
+              <node concept="2mtXCv" id="6VpIoIn7_W6" role="2YIpkB">
+                <property role="2mtXCt" value="1000" />
+              </node>
+            </node>
+            <node concept="2YIpkV" id="6VpIoIn7_Wb" role="2YHWmy">
+              <property role="2YIpk_" value="1y2r_iAeZHH/notEqual" />
+              <node concept="2mtgqS" id="6VpIoIn7_Wf" role="2YIpkA">
+                <ref role="2mtgqQ" node="6VpIoIn7tg1" resolve="area" />
+              </node>
+              <node concept="2YJ26t" id="6VpIoIn7_Wh" role="2YIpkB">
+                <property role="2YJ26v" value="compras" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2mlOTa" id="6VpIoIn7tfy" role="2mlOT4">
+          <property role="TrG5h" value="EnviarARevision" />
+          <ref role="2mlOT6" node="6VpIoIn7tfR" resolve="Borrador" />
+          <ref role="2mlOTu" node="6VpIoIn7tfO" resolve="EnviarSolicitud" />
+          <ref role="2mlOT5" node="6VpIoIn7tfS" resolve="EnRevision" />
+          <node concept="2YIpkV" id="6VpIoIn7tfz" role="2miNNt">
+            <property role="2YIpk_" value="1y2r_iAeZHG/Equal" />
+            <node concept="2YJ26t" id="6VpIoIn7tf$" role="2YIpkB">
+              <property role="2YJ26v" value="compras" />
+            </node>
+            <node concept="2mtgqS" id="6VpIoIn7tf_" role="2YIpkA">
+              <ref role="2mtgqQ" node="6VpIoIn7tg1" resolve="area" />
+            </node>
+          </node>
+        </node>
+        <node concept="2mlOTa" id="6VpIoIn7tfA" role="2mlOT4">
+          <property role="TrG5h" value="AprobarSolicitud" />
+          <ref role="2mlOT6" node="6VpIoIn7tfS" resolve="EnRevision" />
+          <ref role="2mlOT5" node="6VpIoIn7tfT" resolve="Aprobada" />
+          <ref role="2mlOTu" node="6VpIoIn7tfP" resolve="Aprobar" />
+          <node concept="2YLUKa" id="6VpIoIn7tfE" role="2YLUKR">
+            <property role="2YLUKP" value="Compra aprobada" />
+            <ref role="2YLUKO" node="6VpIoIn7tfv" resolve="SupervisorCompras" />
+          </node>
+          <node concept="2YLUKd" id="6VpIoIn7tfF" role="2YLUKR">
+            <ref role="2YLUKf" node="6VpIoIn7tfX" resolve="urgente" />
+            <node concept="2miNN1" id="6VpIoIn7tfG" role="2YLUK8" />
+          </node>
+          <node concept="2YHWmA" id="6VpIoIn7_VD" role="2miNNt">
+            <node concept="2YIpkV" id="6VpIoIn7_VG" role="2YHWmx">
+              <property role="2YIpk_" value="1y2r_iAeZHE/Less" />
+              <node concept="2mtXCv" id="6VpIoIn7_VO" role="2YIpkA">
+                <property role="2mtXCt" value="0" />
+              </node>
+              <node concept="2mtgqS" id="6VpIoIn7_VQ" role="2YIpkB">
+                <ref role="2mtgqQ" node="6VpIoIn7tfV" resolve="monto" />
+              </node>
+            </node>
+            <node concept="2YIpkV" id="6VpIoIn7_VK" role="2YHWmy">
+              <property role="2YIpk_" value="1y2r_iAeZHF/LessOrEqual" />
+              <node concept="2mtgqS" id="6VpIoIn7_VS" role="2YIpkA">
+                <ref role="2mtgqQ" node="6VpIoIn7tfV" resolve="monto" />
+              </node>
+              <node concept="2mtXCv" id="6VpIoIn7_VU" role="2YIpkB">
+                <property role="2mtXCt" value="1000" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2mlOTa" id="6VpIoIn7tfH" role="2mlOT4">
+          <property role="TrG5h" value="RechazarSolicitud" />
+          <ref role="2mlOT6" node="6VpIoIn7tfS" resolve="EnRevision" />
+          <ref role="2mlOT5" node="6VpIoIn7tfU" resolve="Rechazada" />
+          <ref role="2mlOTu" node="6VpIoIn7tfQ" resolve="Rechazar" />
+          <node concept="2YHWmz" id="6VpIoIn7tfI" role="2miNNt">
+            <node concept="2YHWmA" id="6VpIoIn7tfJ" role="2YHWmI">
+              <node concept="2mtgqS" id="6VpIoIn7tfK" role="2YHWmx">
+                <ref role="2mtgqQ" node="6VpIoIn7tfX" resolve="urgente" />
+              </node>
+              <node concept="2YHWmJ" id="6VpIoIn7tfL" role="2YHWmy">
+                <node concept="2mtgqS" id="6VpIoIn7tfM" role="2YHWmD">
+                  <ref role="2mtgqQ" node="6VpIoIn7tfZ" resolve="bloqueada" />
+                </node>
+              </node>
+            </node>
+            <node concept="2mtgqS" id="6VpIoIn7tfN" role="2YHWmH">
+              <ref role="2mtgqQ" node="6VpIoIn7tfZ" resolve="bloqueada" />
+            </node>
+          </node>
+        </node>
+        <node concept="2mlOT2" id="6VpIoIn7tfO" role="2mlOT0">
+          <property role="TrG5h" value="EnviarSolicitud" />
+        </node>
+        <node concept="2mlOT2" id="6VpIoIn7tfP" role="2mlOT0">
+          <property role="TrG5h" value="Aprobar" />
+        </node>
+        <node concept="2mlOT2" id="6VpIoIn7tfQ" role="2mlOT0">
+          <property role="TrG5h" value="Rechazar" />
+        </node>
+        <node concept="2mlOTT" id="6VpIoIn7tfR" role="2mlOTO">
+          <property role="TrG5h" value="Borrador" />
+          <property role="2mlwjB" value="6Fle6ZWwNM1/Initial" />
+        </node>
+        <node concept="2mlOTT" id="6VpIoIn7tfS" role="2mlOTO">
+          <property role="TrG5h" value="EnRevision" />
+          <property role="2mlwjB" value="6Fle6ZWwNM5/Approval" />
+        </node>
+        <node concept="2mlOTT" id="6VpIoIn7tfT" role="2mlOTO">
+          <property role="TrG5h" value="Aprobada" />
+          <property role="2mlwjB" value="6Fle6ZWwNM6/Final" />
+        </node>
+        <node concept="2mlOTT" id="6VpIoIn7tfU" role="2mlOTO">
+          <property role="TrG5h" value="Rechazada" />
+          <property role="2mlwjB" value="6Fle6ZWwNM6/Final" />
+        </node>
+        <node concept="2mipWx" id="6VpIoIn7tfV" role="2mipWX">
+          <property role="TrG5h" value="monto" />
+          <property role="2mipWY" value="6Fle6ZWBatb/Number" />
+          <node concept="2mtXCv" id="6VpIoIn7tfW" role="2YKHLD">
+            <property role="2mtXCt" value="0" />
+          </node>
+        </node>
+        <node concept="2mipWx" id="6VpIoIn7tfX" role="2mipWX">
+          <property role="TrG5h" value="urgente" />
+          <property role="2mipWY" value="6Fle6ZWBatc/Bool" />
+          <node concept="2miNN1" id="6VpIoIn7tfY" role="2YKHLD" />
+        </node>
+        <node concept="2mipWx" id="6VpIoIn7tfZ" role="2mipWX">
+          <property role="TrG5h" value="bloqueada" />
+          <property role="2mipWY" value="6Fle6ZWBatc/Bool" />
+          <node concept="2miNN1" id="6VpIoIn7tg0" role="2YKHLD" />
+        </node>
+        <node concept="2mipWx" id="6VpIoIn7tg1" role="2mipWX">
+          <property role="TrG5h" value="area" />
+          <property role="2mipWY" value="6Fle6ZWBatd/String" />
+          <node concept="2YJ26t" id="6VpIoIn7tg2" role="2YKHLD">
+            <property role="2YJ26v" value="compras" />
+          </node>
+        </node>
+        <node concept="7CXmI" id="6VpIoIn7tg3" role="lGtFl" />
       </node>
     </node>
   </node>
