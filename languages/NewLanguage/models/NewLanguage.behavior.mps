@@ -21,6 +21,7 @@
         <property id="5864038008284099149" name="isStatic" index="2Ki8OM" />
       </concept>
       <concept id="1225194691553" name="jetbrains.mps.lang.behavior.structure.ThisNodeExpression" flags="nn" index="13iPFW" />
+      <concept id="3235159848334022093" name="jetbrains.mps.lang.behavior.structure.Node_ConceptMethodCall" flags="nn" index="3zqWPK" />
     </language>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1080223426719" name="jetbrains.mps.baseLanguage.structure.OrExpression" flags="nn" index="22lmx$" />
@@ -101,6 +102,10 @@
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1080120340718" name="jetbrains.mps.baseLanguage.structure.AndExpression" flags="nn" index="1Wc70l" />
+      <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ngI" index="1ndlxa">
+        <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
+        <child id="1068499141038" name="actualArgument" index="37wK5m" />
+      </concept>
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
       <concept id="4705942098322609812" name="jetbrains.mps.lang.smodel.structure.EnumMember_IsOperation" flags="ng" index="21noJN">
@@ -135,6 +140,9 @@
       </concept>
       <concept id="1138056282393" name="jetbrains.mps.lang.smodel.structure.SLinkListAccess" flags="nn" index="3Tsc0h">
         <reference id="1138056546658" name="link" index="3TtcxE" />
+      </concept>
+      <concept id="2644386474300074836" name="jetbrains.mps.lang.smodel.structure.ConceptIdRefExpression" flags="nn" index="35c_gC">
+        <reference id="2644386474300074837" name="conceptDeclaration" index="35c_gD" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -209,18 +217,35 @@
           </node>
           <node concept="3clFbS" id="6Fle6ZWM$2s" role="2LFqv$">
             <node concept="3clFbJ" id="6Fle6ZWM$_T" role="3cqZAp">
-              <node concept="2OqwBi" id="6Fle6ZWM_sc" role="3clFbw">
-                <node concept="2OqwBi" id="6Fle6ZWM$Ox" role="2Oq$k0">
-                  <node concept="2GrUjf" id="6Fle6ZWM$Cd" role="2Oq$k0">
-                    <ref role="2Gs0qQ" node="6Fle6ZWM$2o" resolve="estado" />
+              <node concept="22lmx$" id="5nOWG0eBor" role="3clFbw">
+                <node concept="2OqwBi" id="6Fle6ZWM_sc" role="3uHU7B">
+                  <node concept="2OqwBi" id="6Fle6ZWM$Ox" role="2Oq$k0">
+                    <node concept="2GrUjf" id="6Fle6ZWM$Cd" role="2Oq$k0">
+                      <ref role="2Gs0qQ" node="6Fle6ZWM$2o" resolve="estado" />
+                    </node>
+                    <node concept="3TrcHB" id="6Fle6ZWM_6W" role="2OqNvi">
+                      <ref role="3TsBF5" to="qyw2:6Fle6ZWwNM8" resolve="kind" />
+                    </node>
                   </node>
-                  <node concept="3TrcHB" id="6Fle6ZWM_6W" role="2OqNvi">
-                    <ref role="3TsBF5" to="qyw2:6Fle6ZWwNM8" resolve="kind" />
+                  <node concept="21noJN" id="6Fle6ZWM__O" role="2OqNvi">
+                    <node concept="21nZrQ" id="6Fle6ZWM__Q" role="21noJM">
+                      <ref role="21nZrZ" to="qyw2:6Fle6ZWwNM6" resolve="Final" />
+                    </node>
                   </node>
                 </node>
-                <node concept="21noJN" id="6Fle6ZWM__O" role="2OqNvi">
-                  <node concept="21nZrQ" id="6Fle6ZWM__Q" role="21noJM">
-                    <ref role="21nZrZ" to="qyw2:6Fle6ZWwNM6" resolve="Final" />
+                <node concept="2OqwBi" id="5nOWG0eB01" role="3uHU7w">
+                  <node concept="2OqwBi" id="5nOWG0eB02" role="2Oq$k0">
+                    <node concept="2GrUjf" id="5nOWG0eB03" role="2Oq$k0">
+                      <ref role="2Gs0qQ" node="6Fle6ZWM$2o" resolve="estado" />
+                    </node>
+                    <node concept="3TrcHB" id="5nOWG0eB04" role="2OqNvi">
+                      <ref role="3TsBF5" to="qyw2:6Fle6ZWwNM8" resolve="kind" />
+                    </node>
+                  </node>
+                  <node concept="21noJN" id="5nOWG0eB05" role="2OqNvi">
+                    <node concept="21nZrQ" id="5nOWG0eB06" role="21noJM">
+                      <ref role="21nZrZ" to="qyw2:6Fle6ZWwNM7" resolve="Error" />
+                    </node>
                   </node>
                 </node>
               </node>
@@ -883,6 +908,7 @@
     <node concept="13hLZK" id="1y2r_iAjClZ" role="13h7CW">
       <node concept="3clFbS" id="1y2r_iAjCm0" role="2VODD2" />
     </node>
+    <node concept="13i0hz" id="5nOWG0fM000" role="13h7CS"><property role="TrG5h" value="esSiempreFalsa" /><property role="2Ki8OM" value="true" /><node concept="3Tm1VV" id="5nOWG0fM120" role="1B3o_S" /><node concept="10P_77" id="5nOWG0fM121" role="3clF45" /><node concept="3clFbS" id="5nOWG0fM122" role="3clF47"><node concept="3clFbJ" id="5nOWG0fM007" role="3cqZAp"><node concept="3clFbS" id="5nOWG0fM006" role="3clFbx"><node concept="3cpWs6" id="5nOWG0fM005" role="3cqZAp"><node concept="3clFbT" id="5nOWG0fM004" role="3cqZAk"><property role="3clFbU" value="false" /></node></node></node><node concept="3clFbC" id="5nOWG0fM003" role="3clFbw"><node concept="10Nm6u" id="5nOWG0fM001" role="3uHU7w" /><node concept="37vLTw" id="5nOWG0fM002" role="3uHU7B"><ref role="3cqZAo" node="5nOWG0fP001" resolve="expresion" /></node></node></node><node concept="3clFbJ" id="5nOWG0fM023" role="3cqZAp"><node concept="3clFbS" id="5nOWG0fM022" role="3clFbx"><node concept="3cpWs6" id="5nOWG0fM021" role="3cqZAp"><node concept="3fqX7Q" id="5nOWG0fM020" role="3cqZAk"><node concept="2OqwBi" id="5nOWG0fM019" role="3fr31v"><node concept="2OqwBi" id="5nOWG0fM017" role="2Oq$k0"><node concept="37vLTw" id="5nOWG0fM012" role="2Oq$k0"><ref role="3cqZAo" node="5nOWG0fP001" resolve="expresion" /></node><node concept="2Xjw5R" id="5nOWG0fM016" role="2OqNvi"><node concept="1xMEDy" id="5nOWG0fM014" role="1xVPHs"><node concept="chp4Y" id="5nOWG0fM013" role="ri$Ld"><ref role="cht4Q" to="qyw2:6Fle6ZWBwiI" resolve="BoolLiteral" /></node></node><node concept="1xIGOp" id="5nOWG0fM015" role="1xVPHs" /></node></node><node concept="3TrcHB" id="5nOWG0fM018" role="2OqNvi"><ref role="3TsBF5" to="qyw2:6Fle6ZWBwiK" resolve="value" /></node></node></node></node></node><node concept="2OqwBi" id="5nOWG0fM011" role="3clFbw"><node concept="37vLTw" id="5nOWG0fM008" role="2Oq$k0"><ref role="3cqZAo" node="5nOWG0fP001" resolve="expresion" /></node><node concept="1mIQ4w" id="5nOWG0fM010" role="2OqNvi"><node concept="chp4Y" id="5nOWG0fM009" role="cj9EA"><ref role="cht4Q" to="qyw2:6Fle6ZWBwiI" resolve="BoolLiteral" /></node></node></node></node><node concept="3clFbJ" id="5nOWG0fM057" role="3cqZAp"><node concept="3clFbS" id="5nOWG0fM056" role="3clFbx"><node concept="3cpWs6" id="5nOWG0fM055" role="3cqZAp"><node concept="1Wc70l" id="5nOWG0fM054" role="3cqZAk"><node concept="2OqwBi" id="5nOWG0fM038" role="3uHU7B"><node concept="2OqwBi" id="5nOWG0fM035" role="2Oq$k0"><node concept="2OqwBi" id="5nOWG0fM033" role="2Oq$k0"><node concept="37vLTw" id="5nOWG0fM028" role="2Oq$k0"><ref role="3cqZAo" node="5nOWG0fP001" resolve="expresion" /></node><node concept="2Xjw5R" id="5nOWG0fM032" role="2OqNvi"><node concept="1xMEDy" id="5nOWG0fM030" role="1xVPHs"><node concept="chp4Y" id="5nOWG0fM029" role="ri$Ld"><ref role="cht4Q" to="qyw2:1y2r_iAdqJV" resolve="Not" /></node></node><node concept="1xIGOp" id="5nOWG0fM031" role="1xVPHs" /></node></node><node concept="3TrEf2" id="5nOWG0fM034" role="2OqNvi"><ref role="3Tt5mk" to="qyw2:1y2r_iAdqJX" resolve="operand" /></node></node><node concept="1mIQ4w" id="5nOWG0fM037" role="2OqNvi"><node concept="chp4Y" id="5nOWG0fM036" role="cj9EA"><ref role="cht4Q" to="qyw2:6Fle6ZWBwiI" resolve="BoolLiteral" /></node></node></node><node concept="2OqwBi" id="5nOWG0fM053" role="3uHU7w"><node concept="2OqwBi" id="5nOWG0fM051" role="2Oq$k0"><node concept="2OqwBi" id="5nOWG0fM046" role="2Oq$k0"><node concept="2OqwBi" id="5nOWG0fM044" role="2Oq$k0"><node concept="37vLTw" id="5nOWG0fM039" role="2Oq$k0"><ref role="3cqZAo" node="5nOWG0fP001" resolve="expresion" /></node><node concept="2Xjw5R" id="5nOWG0fM043" role="2OqNvi"><node concept="1xMEDy" id="5nOWG0fM041" role="1xVPHs"><node concept="chp4Y" id="5nOWG0fM040" role="ri$Ld"><ref role="cht4Q" to="qyw2:1y2r_iAdqJV" resolve="Not" /></node></node><node concept="1xIGOp" id="5nOWG0fM042" role="1xVPHs" /></node></node><node concept="3TrEf2" id="5nOWG0fM045" role="2OqNvi"><ref role="3Tt5mk" to="qyw2:1y2r_iAdqJX" resolve="operand" /></node></node><node concept="2Xjw5R" id="5nOWG0fM050" role="2OqNvi"><node concept="1xMEDy" id="5nOWG0fM048" role="1xVPHs"><node concept="chp4Y" id="5nOWG0fM047" role="ri$Ld"><ref role="cht4Q" to="qyw2:6Fle6ZWBwiI" resolve="BoolLiteral" /></node></node><node concept="1xIGOp" id="5nOWG0fM049" role="1xVPHs" /></node></node><node concept="3TrcHB" id="5nOWG0fM052" role="2OqNvi"><ref role="3TsBF5" to="qyw2:6Fle6ZWBwiK" resolve="value" /></node></node></node></node></node><node concept="2OqwBi" id="5nOWG0fM027" role="3clFbw"><node concept="37vLTw" id="5nOWG0fM024" role="2Oq$k0"><ref role="3cqZAo" node="5nOWG0fP001" resolve="expresion" /></node><node concept="1mIQ4w" id="5nOWG0fM026" role="2OqNvi"><node concept="chp4Y" id="5nOWG0fM025" role="cj9EA"><ref role="cht4Q" to="qyw2:1y2r_iAdqJV" resolve="Not" /></node></node></node></node><node concept="3clFbJ" id="5nOWG0fM087" role="3cqZAp"><node concept="3clFbS" id="5nOWG0fM086" role="3clFbx"><node concept="3cpWs6" id="5nOWG0fM085" role="3cqZAp"><node concept="22lmx$" id="5nOWG0fM084" role="3cqZAk"><node concept="2OqwBi" id="5nOWG0fM072" role="3uHU7B"><node concept="35c_gC" id="5nOWG0fM070" role="2Oq$k0"><ref role="35c_gD" to="qyw2:1y2r_iAeZHJ" resolve="Compare" /></node><node concept="3zqWPK" id="5nOWG0fM071" role="2OqNvi"><ref role="37wK5l" node="5nOWG0fM000" resolve="esSiempreFalsa" /><node concept="2OqwBi" id="5nOWG0fM069" role="37wK5m"><node concept="2OqwBi" id="5nOWG0fM067" role="2Oq$k0"><node concept="37vLTw" id="5nOWG0fM062" role="2Oq$k0"><ref role="3cqZAo" node="5nOWG0fP001" resolve="expresion" /></node><node concept="2Xjw5R" id="5nOWG0fM066" role="2OqNvi"><node concept="1xMEDy" id="5nOWG0fM064" role="1xVPHs"><node concept="chp4Y" id="5nOWG0fM063" role="ri$Ld"><ref role="cht4Q" to="qyw2:1y2r_iAdqJM" resolve="And" /></node></node><node concept="1xIGOp" id="5nOWG0fM065" role="1xVPHs" /></node></node><node concept="3TrEf2" id="5nOWG0fM068" role="2OqNvi"><ref role="3Tt5mk" to="qyw2:1y2r_iAdqJP" resolve="left" /></node></node></node></node><node concept="2OqwBi" id="5nOWG0fM083" role="3uHU7w"><node concept="35c_gC" id="5nOWG0fM081" role="2Oq$k0"><ref role="35c_gD" to="qyw2:1y2r_iAeZHJ" resolve="Compare" /></node><node concept="3zqWPK" id="5nOWG0fM082" role="2OqNvi"><ref role="37wK5l" node="5nOWG0fM000" resolve="esSiempreFalsa" /><node concept="2OqwBi" id="5nOWG0fM080" role="37wK5m"><node concept="2OqwBi" id="5nOWG0fM078" role="2Oq$k0"><node concept="37vLTw" id="5nOWG0fM073" role="2Oq$k0"><ref role="3cqZAo" node="5nOWG0fP001" resolve="expresion" /></node><node concept="2Xjw5R" id="5nOWG0fM077" role="2OqNvi"><node concept="1xMEDy" id="5nOWG0fM075" role="1xVPHs"><node concept="chp4Y" id="5nOWG0fM074" role="ri$Ld"><ref role="cht4Q" to="qyw2:1y2r_iAdqJM" resolve="And" /></node></node><node concept="1xIGOp" id="5nOWG0fM076" role="1xVPHs" /></node></node><node concept="3TrEf2" id="5nOWG0fM079" role="2OqNvi"><ref role="3Tt5mk" to="qyw2:1y2r_iAdqJQ" resolve="right" /></node></node></node></node></node></node></node><node concept="2OqwBi" id="5nOWG0fM061" role="3clFbw"><node concept="37vLTw" id="5nOWG0fM058" role="2Oq$k0"><ref role="3cqZAo" node="5nOWG0fP001" resolve="expresion" /></node><node concept="1mIQ4w" id="5nOWG0fM060" role="2OqNvi"><node concept="chp4Y" id="5nOWG0fM059" role="cj9EA"><ref role="cht4Q" to="qyw2:1y2r_iAdqJM" resolve="And" /></node></node></node></node><node concept="3clFbJ" id="5nOWG0fM117" role="3cqZAp"><node concept="3clFbS" id="5nOWG0fM116" role="3clFbx"><node concept="3cpWs6" id="5nOWG0fM115" role="3cqZAp"><node concept="1Wc70l" id="5nOWG0fM114" role="3cqZAk"><node concept="2OqwBi" id="5nOWG0fM102" role="3uHU7B"><node concept="35c_gC" id="5nOWG0fM100" role="2Oq$k0"><ref role="35c_gD" to="qyw2:1y2r_iAeZHJ" resolve="Compare" /></node><node concept="3zqWPK" id="5nOWG0fM101" role="2OqNvi"><ref role="37wK5l" node="5nOWG0fM000" resolve="esSiempreFalsa" /><node concept="2OqwBi" id="5nOWG0fM099" role="37wK5m"><node concept="2OqwBi" id="5nOWG0fM097" role="2Oq$k0"><node concept="37vLTw" id="5nOWG0fM092" role="2Oq$k0"><ref role="3cqZAo" node="5nOWG0fP001" resolve="expresion" /></node><node concept="2Xjw5R" id="5nOWG0fM096" role="2OqNvi"><node concept="1xMEDy" id="5nOWG0fM094" role="1xVPHs"><node concept="chp4Y" id="5nOWG0fM093" role="ri$Ld"><ref role="cht4Q" to="qyw2:1y2r_iAdqJR" resolve="Or" /></node></node><node concept="1xIGOp" id="5nOWG0fM095" role="1xVPHs" /></node></node><node concept="3TrEf2" id="5nOWG0fM098" role="2OqNvi"><ref role="3Tt5mk" to="qyw2:1y2r_iAdqJT" resolve="left" /></node></node></node></node><node concept="2OqwBi" id="5nOWG0fM113" role="3uHU7w"><node concept="35c_gC" id="5nOWG0fM111" role="2Oq$k0"><ref role="35c_gD" to="qyw2:1y2r_iAeZHJ" resolve="Compare" /></node><node concept="3zqWPK" id="5nOWG0fM112" role="2OqNvi"><ref role="37wK5l" node="5nOWG0fM000" resolve="esSiempreFalsa" /><node concept="2OqwBi" id="5nOWG0fM110" role="37wK5m"><node concept="2OqwBi" id="5nOWG0fM108" role="2Oq$k0"><node concept="37vLTw" id="5nOWG0fM103" role="2Oq$k0"><ref role="3cqZAo" node="5nOWG0fP001" resolve="expresion" /></node><node concept="2Xjw5R" id="5nOWG0fM107" role="2OqNvi"><node concept="1xMEDy" id="5nOWG0fM105" role="1xVPHs"><node concept="chp4Y" id="5nOWG0fM104" role="ri$Ld"><ref role="cht4Q" to="qyw2:1y2r_iAdqJR" resolve="Or" /></node></node><node concept="1xIGOp" id="5nOWG0fM106" role="1xVPHs" /></node></node><node concept="3TrEf2" id="5nOWG0fM109" role="2OqNvi"><ref role="3Tt5mk" to="qyw2:1y2r_iAdqJU" resolve="right" /></node></node></node></node></node></node></node><node concept="2OqwBi" id="5nOWG0fM091" role="3clFbw"><node concept="37vLTw" id="5nOWG0fM088" role="2Oq$k0"><ref role="3cqZAo" node="5nOWG0fP001" resolve="expresion" /></node><node concept="1mIQ4w" id="5nOWG0fM090" role="2OqNvi"><node concept="chp4Y" id="5nOWG0fM089" role="cj9EA"><ref role="cht4Q" to="qyw2:1y2r_iAdqJR" resolve="Or" /></node></node></node></node><node concept="3cpWs6" id="5nOWG0fM119" role="3cqZAp"><node concept="3clFbT" id="5nOWG0fM118" role="3cqZAk"><property role="3clFbU" value="false" /></node></node></node><node concept="37vLTG" id="5nOWG0fP001" role="3clF46"><property role="TrG5h" value="expresion" /><node concept="3Tqbb2" id="5nOWG0fM123" role="1tU5fm"><ref role="ehGHo" to="qyw2:6Fle6ZWBwiH" resolve="Expr" /></node></node></node>
   </node>
 </model>
 

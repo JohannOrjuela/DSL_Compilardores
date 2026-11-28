@@ -298,18 +298,35 @@
             </node>
           </node>
           <node concept="3fqX7Q" id="6Fle6ZWywKs" role="3uHU7B">
-            <node concept="2OqwBi" id="6Fle6ZWyxtI" role="3fr31v">
-              <node concept="2OqwBi" id="6Fle6ZWywUS" role="2Oq$k0">
-                <node concept="1YBJjd" id="6Fle6ZWywKE" role="2Oq$k0">
-                  <ref role="1YBMHb" node="6Fle6ZWyvYR" resolve="estado" />
+            <node concept="22lmx$" id="5nOWG0eTor" role="3fr31v">
+              <node concept="2OqwBi" id="6Fle6ZWyxtI" role="3uHU7B">
+                <node concept="2OqwBi" id="6Fle6ZWywUS" role="2Oq$k0">
+                  <node concept="1YBJjd" id="6Fle6ZWywKE" role="2Oq$k0">
+                    <ref role="1YBMHb" node="6Fle6ZWyvYR" resolve="estado" />
+                  </node>
+                  <node concept="3TrcHB" id="6Fle6ZWyxhA" role="2OqNvi">
+                    <ref role="3TsBF5" to="qyw2:6Fle6ZWwNM8" resolve="kind" />
+                  </node>
                 </node>
-                <node concept="3TrcHB" id="6Fle6ZWyxhA" role="2OqNvi">
-                  <ref role="3TsBF5" to="qyw2:6Fle6ZWwNM8" resolve="kind" />
+                <node concept="21noJN" id="6Fle6ZWyxKV" role="2OqNvi">
+                  <node concept="21nZrQ" id="6Fle6ZWyxKX" role="21noJM">
+                    <ref role="21nZrZ" to="qyw2:6Fle6ZWwNM6" resolve="Final" />
+                  </node>
                 </node>
               </node>
-              <node concept="21noJN" id="6Fle6ZWyxKV" role="2OqNvi">
-                <node concept="21nZrQ" id="6Fle6ZWyxKX" role="21noJM">
-                  <ref role="21nZrZ" to="qyw2:6Fle6ZWwNM6" resolve="Final" />
+              <node concept="2OqwBi" id="5nOWG0eT01" role="3uHU7w">
+                <node concept="2OqwBi" id="5nOWG0eT02" role="2Oq$k0">
+                  <node concept="1YBJjd" id="5nOWG0eT03" role="2Oq$k0">
+                    <ref role="1YBMHb" node="6Fle6ZWyvYR" resolve="estado" />
+                  </node>
+                  <node concept="3TrcHB" id="5nOWG0eT04" role="2OqNvi">
+                    <ref role="3TsBF5" to="qyw2:6Fle6ZWwNM8" resolve="kind" />
+                  </node>
+                </node>
+                <node concept="21noJN" id="5nOWG0eT05" role="2OqNvi">
+                  <node concept="21nZrQ" id="5nOWG0eT06" role="21noJM">
+                    <ref role="21nZrZ" to="qyw2:6Fle6ZWwNM7" resolve="Error" />
+                  </node>
                 </node>
               </node>
             </node>
@@ -1702,5 +1719,6 @@
       <ref role="1YaFvo" to="qyw2:6Fle6ZWwBo_" resolve="Transition" />
     </node>
   </node>
+  <node concept="18kY7G" id="5nOWG0fT075"><property role="TrG5h" value="check_salidasImposibles" /><node concept="3clFbS" id="5nOWG0fT078" role="18ibNy"><node concept="3cpWs8" id="5nOWG0fT067" role="3cqZAp"><node concept="3cpWsn" id="5nOWG0fT002" role="3cpWs9"><property role="TrG5h" value="flujo" /><node concept="3Tqbb2" id="5nOWG0fT068" role="1tU5fm"><ref role="ehGHo" to="qyw2:6Fle6ZWwBnr" resolve="Workflow" /></node><node concept="2OqwBi" id="5nOWG0fT074" role="33vP2m"><node concept="1YBJjd" id="5nOWG0fT069" role="2Oq$k0"><ref role="1YBMHb" node="5nOWG0fT001" resolve="estado" /></node><node concept="2Xjw5R" id="5nOWG0fT073" role="2OqNvi"><node concept="1xMEDy" id="5nOWG0fT071" role="1xVPHs"><node concept="chp4Y" id="5nOWG0fT070" role="ri$Ld"><ref role="cht4Q" to="qyw2:6Fle6ZWwBnr" resolve="Workflow" /></node></node><node concept="1xIGOp" id="5nOWG0fT072" role="1xVPHs" /></node></node></node></node><node concept="3clFbJ" id="5nOWG0fT077" role="3cqZAp"><node concept="3clFbS" id="5nOWG0fT076" role="3clFbx"><node concept="2MkqsV" id="5nOWG0fT066" role="3cqZAp"><node concept="Xl_RD" id="5nOWG0fT064" role="2MkJ7o"><property role="Xl_RC" value="Bloqueo: ninguna transicion de salida puede activarse porque todas sus guardas son siempre falsas" /></node><node concept="1YBJjd" id="5nOWG0fT065" role="1urrMF"><ref role="1YBMHb" node="5nOWG0fT001" resolve="estado" /></node></node></node><node concept="1Wc70l" id="5nOWG0fT063" role="3clFbw"><node concept="1Wc70l" id="5nOWG0fT052" role="3uHU7B"><node concept="3fqX7Q" id="5nOWG0fT037" role="3uHU7B"><node concept="22lmx$" id="5nOWG0fT036" role="3fr31v"><node concept="2OqwBi" id="5nOWG0fT029" role="3uHU7B"><node concept="2OqwBi" id="5nOWG0fT026" role="2Oq$k0"><node concept="1YBJjd" id="5nOWG0fT024" role="2Oq$k0"><ref role="1YBMHb" node="5nOWG0fT001" resolve="estado" /></node><node concept="3TrcHB" id="5nOWG0fT025" role="2OqNvi"><ref role="3TsBF5" to="qyw2:6Fle6ZWwNM8" resolve="kind" /></node></node><node concept="21noJN" id="5nOWG0fT028" role="2OqNvi"><node concept="21nZrQ" id="5nOWG0fT027" role="21noJM"><ref role="21nZrZ" to="qyw2:6Fle6ZWwNM6" resolve="Final" /></node></node></node><node concept="2OqwBi" id="5nOWG0fT035" role="3uHU7w"><node concept="2OqwBi" id="5nOWG0fT032" role="2Oq$k0"><node concept="1YBJjd" id="5nOWG0fT030" role="2Oq$k0"><ref role="1YBMHb" node="5nOWG0fT001" resolve="estado" /></node><node concept="3TrcHB" id="5nOWG0fT031" role="2OqNvi"><ref role="3TsBF5" to="qyw2:6Fle6ZWwNM8" resolve="kind" /></node></node><node concept="21noJN" id="5nOWG0fT034" role="2OqNvi"><node concept="21nZrQ" id="5nOWG0fT033" role="21noJM"><ref role="21nZrZ" to="qyw2:6Fle6ZWwNM7" resolve="Error" /></node></node></node></node></node><node concept="2OqwBi" id="5nOWG0fT051" role="3uHU7w"><node concept="2OqwBi" id="5nOWG0fT045" role="2Oq$k0"><node concept="37vLTw" id="5nOWG0fT043" role="2Oq$k0"><ref role="3cqZAo" node="5nOWG0fT002" resolve="flujo" /></node><node concept="3Tsc0h" id="5nOWG0fT044" role="2OqNvi"><ref role="3TtcxE" to="qyw2:6Fle6ZWwBoF" resolve="transitions" /></node></node><node concept="2HwmR7" id="5nOWG0fT050" role="2OqNvi"><node concept="1bVj0M" id="5nOWG0fT049" role="23t8la"><node concept="3clFbS" id="5nOWG0fT047" role="1bW5cS"><node concept="3clFbF" id="5nOWG0fT046" role="3cqZAp"><node concept="3clFbC" id="5nOWG0fT042" role="3clFbG"><node concept="1YBJjd" id="5nOWG0fT038" role="3uHU7w"><ref role="1YBMHb" node="5nOWG0fT001" resolve="estado" /></node><node concept="2OqwBi" id="5nOWG0fT041" role="3uHU7B"><node concept="37vLTw" id="5nOWG0fT039" role="2Oq$k0"><ref role="3cqZAo" node="5nOWG0fT003" resolve="it" /></node><node concept="3TrEf2" id="5nOWG0fT040" role="2OqNvi"><ref role="3Tt5mk" to="qyw2:6Fle6ZWwBoD" resolve="source" /></node></node></node></node></node><node concept="gl6BB" id="5nOWG0fT003" role="1bW2Oz"><property role="TrG5h" value="it" /><node concept="2jxLKc" id="5nOWG0fT048" role="1tU5fm" /></node></node></node></node></node><node concept="3fqX7Q" id="5nOWG0fT062" role="3uHU7w"><node concept="2OqwBi" id="5nOWG0fT061" role="3fr31v"><node concept="2OqwBi" id="5nOWG0fT055" role="2Oq$k0"><node concept="37vLTw" id="5nOWG0fT053" role="2Oq$k0"><ref role="3cqZAo" node="5nOWG0fT002" resolve="flujo" /></node><node concept="3Tsc0h" id="5nOWG0fT054" role="2OqNvi"><ref role="3TtcxE" to="qyw2:6Fle6ZWwBoF" resolve="transitions" /></node></node><node concept="2HwmR7" id="5nOWG0fT060" role="2OqNvi"><node concept="1bVj0M" id="5nOWG0fT059" role="23t8la"><node concept="3clFbS" id="5nOWG0fT057" role="1bW5cS"><node concept="3clFbF" id="5nOWG0fT056" role="3cqZAp"><node concept="1Wc70l" id="5nOWG0fT023" role="3clFbG"><node concept="3clFbC" id="5nOWG0fT009" role="3uHU7B"><node concept="1YBJjd" id="5nOWG0fT005" role="3uHU7w"><ref role="1YBMHb" node="5nOWG0fT001" resolve="estado" /></node><node concept="2OqwBi" id="5nOWG0fT008" role="3uHU7B"><node concept="37vLTw" id="5nOWG0fT006" role="2Oq$k0"><ref role="3cqZAo" node="5nOWG0fT004" resolve="it" /></node><node concept="3TrEf2" id="5nOWG0fT007" role="2OqNvi"><ref role="3Tt5mk" to="qyw2:6Fle6ZWwBoD" resolve="source" /></node></node></node><node concept="3fqX7Q" id="5nOWG0fT022" role="3uHU7w"><node concept="1Wc70l" id="5nOWG0fT021" role="3fr31v"><node concept="3y3z36" id="5nOWG0fT014" role="3uHU7B"><node concept="10Nm6u" id="5nOWG0fT010" role="3uHU7w" /><node concept="2OqwBi" id="5nOWG0fT013" role="3uHU7B"><node concept="37vLTw" id="5nOWG0fT011" role="2Oq$k0"><ref role="3cqZAo" node="5nOWG0fT004" resolve="it" /></node><node concept="3TrEf2" id="5nOWG0fT012" role="2OqNvi"><ref role="3Tt5mk" to="qyw2:6Fle6ZWBwiM" resolve="guard" /></node></node></node><node concept="2OqwBi" id="5nOWG0fT020" role="3uHU7w"><node concept="35c_gC" id="5nOWG0fT015" role="2Oq$k0"><ref role="35c_gD" to="qyw2:1y2r_iAeZHJ" resolve="Compare" /></node><node concept="3zqWPK" id="5nOWG0fT019" role="2OqNvi"><ref role="37wK5l" to="lmi:5nOWG0fM000" resolve="esSiempreFalsa" /><node concept="2OqwBi" id="5nOWG0fT018" role="37wK5m"><node concept="37vLTw" id="5nOWG0fT016" role="2Oq$k0"><ref role="3cqZAo" node="5nOWG0fT004" resolve="it" /></node><node concept="3TrEf2" id="5nOWG0fT017" role="2OqNvi"><ref role="3Tt5mk" to="qyw2:6Fle6ZWBwiM" resolve="guard" /></node></node></node></node></node></node></node></node></node><node concept="gl6BB" id="5nOWG0fT004" role="1bW2Oz"><property role="TrG5h" value="it" /><node concept="2jxLKc" id="5nOWG0fT058" role="1tU5fm" /></node></node></node></node></node></node></node></node><node concept="1YaCAy" id="5nOWG0fT001" role="1YuTPh"><property role="TrG5h" value="estado" /><ref role="1YaFvo" to="qyw2:6Fle6ZWwBom" resolve="State" /></node></node>
 </model>
 
